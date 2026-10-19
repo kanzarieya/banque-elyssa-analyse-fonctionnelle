@@ -9,29 +9,19 @@
 
 ## 1. Vue d'ensemble en quatre couloirs
 
-```
- CLIENT      [demande]──▶ dépose les pièces ──▶ attend ──▶ reçoit la réponse ──▶ signe / renonce
-                  ▲                                               ▲
-                  │ retour (pièces manquantes)                    │ courrier ou téléphone
- AGENCE      vérifie ──▶ [complet ?] ──non──▶ redemande ──────────┘
-                             │oui
-                             ▼
-                        fiche papier ──▶ scan ──▶ envoie au siège
-                                                        │
- SIÈGE       réceptionne ◀───────────────────────────────┘
-                  │
-                  ▼
-             [conforme ?] ──non──▶ relance téléphonique ──▶ attend 2 à 5 jours
-                  │oui
-                  ▼
-             saisie Excel ──▶ recherche archives papier ──▶ étude de solvabilité
-                                                                  │
- COMITÉ                                                           ▼
-                        décision ◀── réunion hebdomadaire ─── dossier transmis
-                            │
-                            ▼
-                     notification client (délai variable)
-```
+![Cartographie AS-IS du processus de demande de crédit — modélisé sous Bizagi Modeler](as-is-processus.png)
+
+*Diagramme modélisé sous Bizagi Modeler (standard BPMN 2.0) à partir des constats
+des cinq entretiens. Un pool unique, quatre couloirs : Client, Agence — accueil,
+Siège — étude crédit, Comité de crédit.*
+
+**Lecture rapide :** le client dépose ses pièces à l'agence ; l'agent vérifie sur une
+liste papier non standardisée (boucle 1 si incomplet — le client revient plus tard) ;
+le dossier transite par fiche papier puis scan vers le siège ; un second contrôle de
+complétude déclenche éventuellement une relance téléphonique (boucle 2) ; puis saisie
+dans le fichier Excel et recherche d'historique aux archives papier (boucle 3) ;
+enfin passage en comité hebdomadaire et notification du client par courrier ou
+téléphone, sans trace ni récépissé.
 
 ## 2. Décomposition du délai moyen (12 jours ouvrés)
 
@@ -73,15 +63,11 @@ cela représente 5 à 7 heures hebdomadaires d'analyse perdues.
 
 ## 5. Le modèle BPMN
 
-Le fichier **[`Banque-Elyssa_AS-IS.bpmn`](Banque-Elyssa_AS-IS.bpmn)** contient la
-cartographie complète, prête à être importée dans **Bizagi Modeler** :
-
-1. Ouvrir Bizagi Modeler → **Fichier → Importer → BPMN 2.0**
-2. Sélectionner `Banque-Elyssa_AS-IS.bpmn`
-3. Vérifier les quatre couloirs (Client, Agence, Siège, Comité), puis enregistrer
-
-Le modèle comporte : 1 pool, 4 couloirs, 17 éléments (2 événements de fin,
-3 passerelles), 18 flux, dont les trois boucles décrites ci-dessus.
+Le diagramme de la section 1 a été modélisé sous **Bizagi Modeler** en standard
+BPMN 2.0 : **1 pool, 4 couloirs, 11 tâches, 3 passerelles exclusives, 2 événements
+de fin et 18 flux séquentiels**, dont les trois boucles annotées. La modélisation a
+été réalisée en important le processus au format BPMN 2.0 puis en l'ajustant
+visuellement (étiquettes de flux, disposition des couloirs) pour la lisibilité.
 
 ## 6. Ce que le TO-BE devra résoudre (aperçu semaine 5)
 
