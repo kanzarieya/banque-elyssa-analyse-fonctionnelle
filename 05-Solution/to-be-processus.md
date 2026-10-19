@@ -79,5 +79,6 @@ de re-contrôle automatique en cas de pièces manquantes.*
 
 ---
 
-*Voir aussi : la [spécification des wireframes](wireframes-spec.md) et, en semaine 6,
-le business case et la matrice de traçabilité complète.*
+*Voir aussi : les [wireframes low-fi](wireframes/README.md) (12 écrans, version interactive :
+[`wireframes.html`](wireframes.html)) et, en semaine 6, le business case et la matrice de
+traçabilité complète.*

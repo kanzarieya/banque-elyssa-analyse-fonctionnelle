@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Wireframes — Banque Elyssa · Module demande de crédit</title>
+<style>
+  :root{
+    --ink:#1a1a1a; --ink2:#555; --ink3:#8a8a8a;
+    --line:#d6d6d6; --line2:#b5b5b5;
+    --fill:#f4f4f4; --fill2:#eaeaea;
+    --canvas:#e7e7e7;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{background:var(--canvas); color:var(--ink);
+       font:14px/1.45 "Segoe UI", Arial, sans-serif; padding:40px 48px 64px}
+  .pagehead{max-width:1480px; margin:0 auto 36px}
+  .pagehead h1{font-size:24px; font-weight:700}
+  .pagehead p{color:var(--ink2); margin-top:6px; max-width:900px}
+  .legend{display:flex; gap:18px; flex-wrap:wrap; margin-top:14px; font-size:12.5px; color:var(--ink2);
+          background:#fff; border:1px solid var(--line); border-radius:10px; padding:10px 14px; max-width:fit-content}
+  .legend b{color:var(--ink)}
+  .row{max-width:1480px; margin:0 auto 56px; display:flex; gap:48px; flex-wrap:wrap; align-items:flex-start}
+  a.frame{text-decoration:none; color:inherit; display:block}
+  .flabel{display:flex; align-items:baseline; gap:10px; margin:0 2px 8px}
+  .flabel .name{font-weight:700; font-size:13.5px; color:#222}
+  .flabel .dim{font-size:12px; color:var(--ink3)}
+  .flabel .tags{margin-left:auto; display:flex; gap:6px}
+  .tag{border:1px solid var(--line2); border-radius:999px; padding:1px 9px;
+       font-size:11px; color:var(--ink2); background:#f2f2f2; font-weight:600; white-space:nowrap}
+
+  .artboard{background:#fff; box-shadow:0 0 0 1px #cfcfcf, 0 3px 12px rgba(0,0,0,.10);
+            display:flex; flex-direction:column; overflow:hidden}
+  .mobile{width:390px; height:844px}
+  .desktop{width:1440px; height:900px}
+
+  /* ---------- éléments communs ---------- */
+  .statusbar{height:26px; display:flex; align-items:center; justify-content:space-between;
+             padding:0 18px; font-size:12px; font-weight:600; color:var(--ink); flex:none}
+  .statusbar .ics{display:flex; gap:5px; align-items:center}
+  .sbar-ic{width:14px; height:9px; border:1.4px solid var(--ink); border-radius:2px; display:inline-block}
+  .appbar{height:52px; display:flex; align-items:center; gap:12px; padding:0 16px;
+          border-bottom:1px solid var(--line); flex:none}
+  .appbar .ttl{font-weight:700; font-size:16px}
+  .appbar .spacer{margin-left:auto}
+  .icbtn{width:36px; height:36px; display:flex; align-items:center; justify-content:center;
+         border:1px solid var(--line2); border-radius:10px; background:#fff}
+  .body{flex:1; padding:16px; overflow:hidden; display:flex; flex-direction:column; gap:14px}
+  .homebar{height:22px; flex:none; display:flex; align-items:center; justify-content:center}
+  .homebar i{width:120px; height:4px; background:#222; border-radius:2px; display:block}
+
+  .btn{height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center;
+       font-weight:700; font-size:15px}
+  .btn-p{background:#1c1c1c; color:#fff}
+  .btn-s{background:#fff; border:1.5px solid #1c1c1c; color:#1c1c1c}
+  .btn-row{display:flex; gap:10px}
+  .btn-row .btn{flex:1}
+  .link{color:var(--ink); font-weight:600; text-decoration:underline; text-align:center}
+
+  .stepper{display:flex; align-items:flex-start; gap:0; margin:4px 2px}
+  .step{flex:1; display:flex; flex-direction:column; align-items:center; gap:6px; position:relative}
+  .step .dot{width:28px; height:28px; border-radius:50%; border:2px solid var(--line2);
+             background:#fff; color:var(--ink3); font-weight:700; font-size:13px;
+             display:flex; align-items:center; justify-content:center; z-index:1}
+  .step .lbl{font-size:11.5px; color:var(--ink3); text-align:center}
+  .step::before{content:""; position:absolute; top:14px; left:-50%; width:100%; height:2px; background:var(--line)}
+  .step:first-child::before{display:none}
+  .step.done .dot{background:#1c1c1c; border-color:#1c1c1c; color:#fff}
+  .step.done .lbl{color:var(--ink); font-weight:600}
+  .step.done::before{background:#1c1c1c}
+  .step.act .dot{border-color:#1c1c1c; color:#1c1c1c; box-shadow:0 0 0 4px #e9e9e9}
+  .step.act .lbl{color:var(--ink); font-weight:700}
+
+  .h2{font-size:15px; font-weight:700}
+  .note{font-size:12px; color:var(--ink2)}
+  .panel{border:1px solid var(--line); border-radius:12px; padding:12px; background:#fff}
+  .panel.g{background:var(--fill)}
+  .draft{border:1.5px dashed var(--line2); background:var(--fill); border-radius:10px;
+         padding:8px 12px; font-size:12px; color:var(--ink2); display:flex; gap:8px; align-items:center}
+  .alert{border:2px solid #1c1c1c; border-radius:12px; padding:14px; display:flex; gap:12px; align-items:flex-start}
+  .alert .t{font-weight:700}
+  .kbd{font:600 11.5px "Consolas", monospace; background:var(--fill2); border:1px solid var(--line);
+       border-radius:6px; padding:1px 6px}
+
+  .doc{display:flex; gap:12px; padding:12px; border:1px solid var(--line); border-radius:12px; align-items:flex-start}
+  .thumb{width:44px; height:44px; border-radius:8px; background:var(--fill2);
+         border:1px solid var(--line); flex:none; display:flex; align-items:center; justify-content:center; color:var(--ink3)}
+  .doc .nm{font-weight:700; font-size:14px}
+  .doc .hint{font-size:12px; color:var(--ink2); margin-top:2px}
+  .doc .acts{display:flex; gap:8px; margin-top:8px}
+  .mini{height:34px; padding:0 12px; border-radius:8px; border:1.5px solid #1c1c1c; background:#fff;
+        font-weight:700; font-size:12.5px; display:inline-flex; align-items:center; gap:6px}
+  .st{margin-left:auto; flex:none; font-size:11px; font-weight:700; padding:3px 9px; border-radius:999px; white-space:nowrap}
+  .st-ok{border:1.2px solid #444; color:#222; background:#efefef}
+  .st-mq{border:1.5px dashed #999; color:#666; background:#fafafa}
+  .st-ko{border:2px solid #1c1c1c; color:#1c1c1c; background:#fff}
+
+  .field label{font-size:12px; font-weight:700; color:var(--ink2); display:block; margin-bottom:5px}
+  .field .inp{height:46px; border:1.5px solid var(--line2); border-radius:10px; background:#fff;
+              display:flex; align-items:center; padding:0 12px; font-size:14px; color:var(--ink)}
+  .field .inp.ph{color:var(--ink3)}
+
+  /* timeline verticale */
+  .tl{display:flex; flex-direction:column}
+  .tl-i{display:flex; gap:14px; position:relative; padding-bottom:22px}
+  .tl-i::before{content:""; position:absolute; left:11px; top:26px; bottom:0; width:2px; background:var(--line2)}
+  .tl-i:last-child::before{display:none}
+  .tl-i.future::before{background:var(--line); border-top:2px dashed var(--line)}
+  .tl-d{width:24px; height:24px; border-radius:50%; flex:none; background:#1c1c1c; color:#fff;
+        display:flex; align-items:center; justify-content:center; z-index:1}
+  .tl-i.future .tl-d{background:#fff; border:2px dashed var(--line2); color:var(--ink3)}
+  .tl-c .t{font-weight:700; font-size:14px}
+  .tl-c .d{font-size:12px; color:var(--ink2)}
+  .tl-c .prev{font-size:11.5px; color:var(--ink3); border:1px dashed var(--line2); border-radius:6px;
+              padding:1px 7px; display:inline-block; margin-top:3px}
+
+  .notif{display:flex; gap:10px; align-items:flex-start; padding:10px 0; border-bottom:1px solid var(--line)}
+  .notif:last-child{border-bottom:0}
+  .notif .w{flex:1}
+  .notif .t{font-size:13.5px; font-weight:600}
+  .notif .d{font-size:11.5px; color:var(--ink3)}
+  .notif .ch{font-size:10.5px; font-weight:700; border:1px solid var(--line2); border-radius:5px;
+             padding:1px 6px; color:var(--ink2); flex:none; margin-top:1px}
+
+  /* ---------- desktop ---------- */
+  .topbar{height:56px; flex:none; border-bottom:1px solid var(--line); display:flex; align-items:center;
+          gap:16px; padding:0 20px; background:#fff}
+  .logo{width:118px; height:28px; background:var(--ink); color:#fff; border-radius:6px;
+        display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700}
+  .crumb{font-size:13px; color:var(--ink2)}
+  .search{flex:1; max-width:340px; height:34px; border:1.5px solid var(--line2); border-radius:8px;
+          display:flex; align-items:center; gap:8px; padding:0 10px; color:var(--ink3); font-size:13px}
+  .user{margin-left:auto; display:flex; align-items:center; gap:10px; font-size:13px; font-weight:600}
+  .avatar{width:32px; height:32px; border-radius:50%; background:var(--ink2); color:#fff;
+          display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700}
+  .desk-wrap{flex:1; display:flex; min-height:0}
+  .side{width:206px; flex:none; border-right:1px solid var(--line); padding:16px 10px; background:var(--fill)}
+  .nav-i{display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:8px;
+         font-size:13.5px; font-weight:600; color:var(--ink2); margin-bottom:4px}
+  .nav-i.on{background:#1c1c1c; color:#fff}
+  .nav-i .bdg{margin-left:auto; font-size:11px; background:#fff; color:#1c1c1c; border-radius:999px;
+               padding:1px 8px; font-weight:700}
+  .side .sep{height:1px; background:var(--line); margin:10px 6px}
+  .main{flex:1; padding:18px 20px; display:flex; gap:18px; min-width:0}
+  .col-l{flex:1.6; min-width:0; display:flex; flex-direction:column; gap:12px}
+  .col-r{flex:1; min-width:0; display:flex; flex-direction:column; gap:12px}
+  .d-h1{font-size:17px; font-weight:700}
+  .filters{display:flex; gap:8px; align-items:center}
+  .f-sel{height:32px; border:1.2px solid var(--line2); border-radius:8px; background:#fff; padding:0 10px;
+         font-size:12.5px; font-weight:600; color:var(--ink2); display:flex; align-items:center; gap:8px}
+  .tbl{width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line)}
+  .tbl th{font-size:11px; text-transform:uppercase; letter-spacing:.4px; color:var(--ink3); font-weight:700;
+          text-align:left; padding:9px 10px; border-bottom:1.5px solid var(--line2); background:var(--fill)}
+  .tbl td{font-size:12.5px; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:middle}
+  .tbl tr.sel td{background:#efefef; box-shadow:inset 3px 0 0 #1c1c1c}
+  .pill{font-size:10.5px; font-weight:700; border-radius:999px; padding:2px 8px; white-space:nowrap; border:1.2px solid #444}
+  .pill.solid{background:#1c1c1c; color:#fff; border-color:#1c1c1c}
+  .pill.dash{border-style:dashed; border-color:#999; color:#666}
+  .rowbtn{font-size:11.5px; font-weight:700; border:1.3px solid #1c1c1c; border-radius:7px;
+          padding:4px 10px; background:#fff; white-space:nowrap}
+  .tabs{display:flex; gap:2px; border-bottom:1.5px solid var(--line2)}
+  .tab{padding:8px 14px; font-size:13px; font-weight:600; color:var(--ink2)}
+  .tab.on{color:var(--ink); font-weight:700; box-shadow:inset 0 -2.5px 0 #1c1c1c}
+  textarea.ta{width:100%; height:74px; border:1.5px solid var(--line2); border-radius:10px; resize:none;
+              padding:10px; font:13px "Segoe UI", Arial; color:var(--ink3); background:#fff}
+  .kv{display:flex; gap:18px; flex-wrap:wrap}
+  .kv .k{font-size:11px; color:var(--ink3); font-weight:700; text-transform:uppercase; letter-spacing:.4px}
+  .kv .v{font-size:14px; font-weight:700}
+  .pgrid{display:flex; gap:8px}
+  .pcell{width:64px; text-align:center}
+  .pcell .th{width:64px; height:46px; border:1px solid var(--line2); border-radius:6px; background:var(--fill2);
+              display:flex; align-items:center; justify-content:center; color:var(--ink3)}
+  .pcell .lb{font-size:10px; color:var(--ink2); margin-top:3px; line-height:1.2}
+  .hint{font-size:11.5px; color:var(--ink2)}
+  .hintbox{border:1px dashed var(--line2); border-radius:8px; padding:8px 10px; font-size:11.5px; color:var(--ink2); background:var(--fill)}
+  .kpis{display:flex; gap:10px}
+  .kpi{flex:1; border:1px solid var(--line); border-radius:10px; padding:10px 12px; background:#fff}
+  .kpi .n{font-size:20px; font-weight:700; letter-spacing:.3px}
+  .kpi .l{font-size:11px; color:var(--ink2); margin-top:3px; line-height:1.3}
+  .tight{gap:10px}
+  .tight .panel{padding:10px 12px}
+  .tight .tl-i{padding-bottom:14px}
+  .dstepper{display:flex; gap:0; margin-bottom:4px}
+  .dstep{flex:1; display:flex; align-items:center; gap:10px; padding:10px 14px; font-size:13px; font-weight:600;
+         color:var(--ink3); border-bottom:2.5px solid var(--line)}
+  .dstep .dot{width:24px; height:24px; border-radius:50%; border:2px solid var(--line2); color:var(--ink3);
+              display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; background:#fff}
+  .dstep.done{color:var(--ink); border-color:#1c1c1c}
+  .dstep.done .dot{background:#1c1c1c; border-color:#1c1c1c; color:#fff}
+  .dstep.act{color:var(--ink); font-weight:700; border-color:#1c1c1c}
+  .dstep.act .dot{border-color:#1c1c1c; color:#1c1c1c}
+
+  /* ---------- étapes 1 & consentement ---------- */
+  .radio-card{display:flex; gap:12px; align-items:flex-start; border:1.5px solid var(--line2);
+              border-radius:12px; padding:12px; background:#fff}
+  .radio-card .rd{width:20px; height:20px; border-radius:50%; border:2px solid var(--line2); flex:none;
+                  margin-top:2px; display:flex; align-items:center; justify-content:center; font-size:11px}
+  .radio-card .rt{font-weight:700; font-size:14px}
+  .radio-card .rs{font-size:12px; color:var(--ink2); margin-top:2px}
+  .radio-card.on{border-color:#1c1c1c; box-shadow:0 0 0 1.5px #1c1c1c}
+  .radio-card.on .rd{border-color:#1c1c1c}
+  .radio-card.on .rd::after{content:""; width:10px; height:10px; border-radius:50%; background:#1c1c1c}
+  .field .inp .car{margin-left:auto; color:var(--ink3)}
+  .field .help{font-size:11.5px; color:var(--ink2); margin-top:5px}
+  .btn-dis{background:#e4e4e4; color:#8a8a8a; border:1.5px solid var(--line2); cursor:not-allowed}
+  .consent{display:flex; gap:12px; align-items:flex-start; border:2px solid #1c1c1c; border-radius:12px; padding:14px}
+  .consent .cb{width:22px; height:22px; border:2px solid #1c1c1c; border-radius:5px; flex:none; margin-top:1px;
+               display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; background:#fff}
+  .consent .cb.on{background:#1c1c1c; color:#fff}
+  .consent .ct{font-size:13px; font-weight:600; line-height:1.5}
+  .consent .ct u{text-decoration:underline}
+
+  /* ---------- état vide ---------- */
+  .empty{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+         gap:12px; text-align:center; border:1.5px dashed var(--line2); border-radius:14px; padding:24px}
+  .empty .big{width:76px; height:76px; border-radius:50%; border:2px dashed var(--line2); color:var(--ink3);
+              display:flex; align-items:center; justify-content:center; font-size:32px}
+  .resume{display:flex; gap:12px; align-items:center; border:1.5px dashed var(--line2);
+          border-radius:12px; padding:12px; background:var(--fill)}
+  .resume .nm{font-weight:700; font-size:14px}
+
+  /* ---------- RTL (RG-07) ---------- */
+  .rtl{direction:rtl; text-align:right; font-family:"Segoe UI", Tahoma, "Noto Naskh Arabic", Arial, sans-serif}
+  .rtl .btn-row .btn, .rtl .doc .acts, .rtl .notif{direction:rtl}
+  .rtl .spacer{margin-left:0; margin-right:auto}
+  .rtl .st, .rtl .pill{margin-left:0; margin-right:auto}
+  .rtl .side{border-right:0; border-left:1px solid var(--line)}
+
+  /* ---------- référentiel / comité ---------- */
+  .toggle{width:40px; height:22px; border-radius:999px; border:1.5px solid #1c1c1c; position:relative; flex:none; background:#fff}
+  .toggle::after{content:""; position:absolute; top:3px; left:3px; width:13px; height:13px; border-radius:50%; background:#fff; border:1.5px solid #1c1c1c}
+  .toggle.on{background:#1c1c1c}
+  .toggle.on::after{left:auto; right:3px; background:#fff; border-color:#fff}
+  .decision{display:flex; gap:10px}
+  .decision .radio-card{flex:1; flex-direction:row; align-items:center}
+  .stack-cards>*+*{margin-top:8px}
+</style>
+</head>
+<body>
+
+<header class="pagehead">
+  <h1>Wireframes — Module de demande de crédit</h1>
+  <p>Cas fictif Banque Elyssa · maquettes <b>low-fidelity en niveaux de gris</b> (la couleur est réservée
+     à la haute fidélité) · mobile d'abord 390 × 844 pour le parcours client (ENF-04) · desktop 1440 × 900
+     pour les espaces métier · bilingue arabe / français avec mise en miroir RTL (RG-07) · chaque écran est
+     tracé vers ses user stories et règles de gestion.</p>
+  <div class="legend">
+    <span><b>Légende des états :</b></span>
+    <span>✔ reçu / conforme</span>
+    <span>┄ manquant (bordure pointillée)</span>
+    <span>▲ refusé (bordure forte + motif)</span>
+    <span>◷ à venir</span>
+    <span>— toute cible tactile ≥ 44 px</span>
+  </div>
+</header>
+
+<!-- ================= MOBILE 0 : étape 1 + consentement ================= -->
+<div class="row">
+
+  <a class="frame" id="f-us01-etape1" href="#f-us01-etape1">
+    <div class="flabel"><span class="name">US-01 Dépôt — étape 1</span><span class="dim">390 × 844</span>
+      <span class="tags"><span class="tag">US-01</span><span class="tag">US-03</span><span class="tag">RG-01</span></span></div>
+    <div class="artboard mobile">
+      <div class="statusbar"><span>9:41</span><span class="ics"><i class="sbar-ic"></i><i class="sbar-ic"></i><i class="sbar-ic" style="width:20px"></i></span></div>
+      <div class="appbar">
+        <span class="icbtn">‹</span><span class="ttl">Nouvelle demande</span><span class="spacer"></span><span class="icbtn">✕</span>
+      </div>
+      <div class="body">
+        <div class="draft">◷ Reprise du brouillon : type « Consommation » déjà sélectionné (RG-01)</div>
+        <div class="stepper">
+          <div class="step act"><span class="dot">1</span><span class="lbl">Type &amp; montant</span></div>
+          <div class="step"><span class="dot">2</span><span class="lbl">Pièces</span></div>
+          <div class="step"><span class="dot">3</span><span class="lbl">Récapitulatif</span></div>
+        </div>
+        <div>
+          <div class="h2">Type de crédit</div>
+          <div class="note">La checklist des pièces s'adapte au type choisi (RG-01).</div>
+        </div>
+        <div class="stack-cards">
+          <div class="radio-card on"><span class="rd"></span>
+            <div><div class="rt">Crédit consommation</div><div class="rs">jusqu'à 30 000 DT · 12 à 60 mois</div></div>
+          </div>
+          <div class="radio-card"><span class="rd"></span>
+            <div><div class="rt">Trésorerie PME</div><div class="rs">sur justificatifs d'exploitation</div></div>
+          </div>
+          <div class="radio-card"><span class="rd"></span>
+            <div><div class="rt">Crédit immobilier</div><div class="rs">hors périmètre de ce module — information</div></div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Montant demandé (DT)</label>
+          <div class="inp">15 000</div>
+          <div class="help">💡 « Combien coûte votre crédit ? » — simulateur de mensualité depuis le récapitulatif</div>
+        </div>
+        <div class="field">
+          <label>Durée souhaitée</label>
+          <div class="inp">36 mois<span class="car">▾</span></div>
+        </div>
+        <div style="margin-top:auto">
+          <div class="note" style="text-align:center; margin-bottom:8px">Étape suivante : la liste exacte des pièces pour ce type (4 pièces)</div>
+          <div class="btn btn-p">Voir les pièces justificatives</div>
+        </div>
+      </div>
+      <div class="homebar"><i></i></div>
+    </div>
+  </a>
+
+  <a class="frame" id="f-us12-consentement" href="#f-us12-consentement">
+    <div class="flabel"><span class="name">US-12 Récapitulatif — consentement</span><span class="dim">390 × 844</span>
+      <span class="tags"><span class="tag">US-12</span><span class="tag">RG-06</span><span class="tag">RG-02</span></span></div>
+    <div class="artboard mobile">
+      <div class="statusbar"><span>9:41</span><span class="ics"><i class="sbar-ic"></i><i class="sbar-ic"></i><i class="sbar-ic" style="width:20px"></i></span></div>
+      <div class="appbar">
+        <span class="icbtn">‹</span><span class="ttl">Récapitulatif</span><span class="spacer"></span><span class="icbtn">✕</span>
+      </div>
+      <div class="body">
+        <div class="stepper">
+          <div class="step done"><span class="dot">✓</span><span class="lbl">Type &amp; montant</span></div>
+          <div class="step done"><span class="dot">✓</span><span class="lbl">Pièces</span></div>
+          <div class="step act"><span class="dot">3</span><span class="lbl">Récapitulatif</span></div>
+        </div>
+        <div class="panel g">
+          <div class="kv">
+            <div><div class="k">Type</div><div class="v">Consommation</div></div>
+            <div><div class="k">Montant</div><div class="v">15 000 DT</div></div>
+            <div><div class="k">Durée</div><div class="v">36 mois</div></div>
+          </div>
+          <div class="note" style="margin-top:8px">4 / 4 pièces conformes — contrôle automatique validé (US-06).</div>
+        </div>
+        <div class="panel">
+          <div class="h2" style="font-size:13px; margin-bottom:8px">Pièces au dossier</div>
+          <div class="kv" style="gap:10px">
+            <div><div class="k">CIN</div><div class="v">✔ conforme</div></div>
+            <div><div class="k">Fiches de paie ×3</div><div class="v">✔ conformes</div></div>
+            <div><div class="k">Attestation de travail</div><div class="v">✔ conforme</div></div>
+            <div><div class="k">Relevé de compte</div><div class="v">✔ re-téléversé</div></div>
+          </div>
+        </div>
+        <div class="consent">
+          <span class="cb"></span>
+          <div class="ct">J'accepte que la Banque Elyssa traite mes données personnelles pour l'étude de cette
+            demande, conformément à la <u>politique de confidentialité</u>.</div>
+        </div>
+        <div class="hintbox">Case NON cochée = bouton « Soumettre » désactivé + message explicite
+          « Le consentement est obligatoire avant toute soumission » (RG-06 · US-12).</div>
+        <div style="margin-top:auto">
+          <div class="btn btn-dis">Soumettre la demande</div>
+        </div>
+      </div>
+      <div class="homebar"><i></i></div>
+    </div>
+  </a>
+</div>
+
+<!-- ================= MOBILE 1 + 2 ================= -->
+<div class="row">
+
+  <a class="frame" id="f-us01-depot" href="#f-us01-depot">
+    <div class="flabel"><span class="name">US-01 Dépôt — pièces</span><span class="dim">390 × 844</span>
+      <span class="tags"><span class="tag">US-01</span><span class="tag">US-03</span><span class="tag">RG-01</span></span></div>
+    <div class="artboard mobile">
+      <div class="statusbar"><span>9:41</span><span class="ics"><i class="sbar-ic"></i><i class="sbar-ic"></i><i class="sbar-ic" style="width:20px"></i></span></div>
+      <div class="appbar">
+        <span class="icbtn">‹</span><span class="ttl">Nouvelle demande</span><span class="spacer"></span><span class="icbtn">✕</span>
+      </div>
+      <div class="body">
+        <div class="draft">◷ Brouillon enregistré automatiquement — reprise à l'identique (RG-01)</div>
+        <div class="stepper">
+          <div class="step done"><span class="dot">✓</span><span class="lbl">Type &amp; montant</span></div>
+          <div class="step act"><span class="dot">2</span><span class="lbl">Pièces</span></div>
+          <div class="step"><span class="dot">3</span><span class="lbl">Récapitulatif</span></div>
+        </div>
+        <div>
+          <div class="h2">Pièces justificatives</div>
+          <div class="note">Checklist générée depuis le référentiel selon le type de crédit choisi (RG-01).</div>
+        </div>
+        <div class="doc">
+          <span class="thumb">▤</span>
+          <div><div class="nm">CIN — recto-verso</div><div class="hint">JPG ou PDF, ≤ 5 Mo</div></div>
+          <span class="st st-ok">✔ Reçue</span>
+        </div>
+        <div class="doc">
+          <span class="thumb">▤</span>
+          <div><div class="nm">Fiches de paie — 3 derniers mois</div><div class="hint">3 fichiers joints</div></div>
+          <span class="st st-ok">✔ Reçue</span>
+        </div>
+        <div class="doc" style="border-style:dashed">
+          <span class="thumb">▤</span>
+          <div>
+            <div class="nm">Attestation de travail</div>
+            <div class="acts"><span class="mini">◉ Photographier</span><span class="mini">⇪ Téléverser</span></div>
+          </div>
+          <span class="st st-mq">Manquante</span>
+        </div>
+        <div class="doc" style="border-width:2px">
+          <span class="thumb">▤</span>
+          <div><div class="nm">Relevé de compte</div><div class="hint">▲ Refusée : format illisible — re-téléverser en JPG ou PDF</div></div>
+          <span class="st st-ko">▲ Refusée</span>
+        </div>
+        <div style="margin-top:auto">
+          <div class="btn btn-p">Continuer vers le récapitulatif</div>
+        </div>
+      </div>
+      <div class="homebar"><i></i></div>
+    </div>
+  </a>
+
+  <a class="frame" id="f-us01-blocage" href="#f-us01-blocage">
+    <div class="flabel"><span class="name">US-01 Dépôt — blocage</span><span class="dim">390 × 844</span>
+      <span class="tags"><span class="tag">US-06</span><span class="tag">RG-01</span></span></div>
+    <div class="artboard mobile">
+      <div class="statusbar"><span>9:41</span><span class="ics"><i class="sbar-ic"></i><i class="sbar-ic"></i><i class="sbar-ic" style="width:20px"></i></span></div>
+      <div class="appbar">
+        <span class="icbtn">‹</span><span class="ttl">Récapitulatif</span><span class="spacer"></span><span class="icbtn">✕</span>
+      </div>
+      <div class="body">
+        <div class="stepper">
+          <div class="step done"><span class="dot">✓</span><span class="lbl">Type &amp; montant</span></div>
+          <div class="step done"><span class="dot">✓</span><span class="lbl">Pièces</span></div>
+          <div class="step act"><span class="dot">3</span><span class="lbl">Récapitulatif</span></div>
+        </div>
+        <div class="alert">
+          <span style="font-size:20px">▲</span>
+          <div>
+            <div class="t">Soumission impossible : 2 pièces à corriger</div>
+            <div class="note" style="margin-top:2px">Le contrôle automatique a bloqué l'envoi — le détail exact est affiché,
+            sans aucun appel téléphonique (US-06).</div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="doc" style="border-style:dashed; border-width:0 0 1px 0; border-radius:0">
+            <div><div class="nm">Attestation de travail</div><div class="hint">Pièce obligatoire pour tout type de crédit</div></div>
+            <span class="st st-mq">Manquante</span>
+          </div>
+          <div class="doc" style="border-width:0; padding-bottom:0">
+            <div><div class="nm">Relevé de compte</div><div class="hint">Fichier illisible — à re-téléverser</div></div>
+            <span class="st st-ko">▲ Refusée</span>
+          </div>
+        </div>
+        <div class="hintbox">Règle appliquée (RG-01) : pour un montant &gt; 20 000 DT, un second justificatif
+          de revenu est exigé par le référentiel. Le client voit la règle, pas juste un refus.</div>
+        <div style="margin-top:auto; display:flex; flex-direction:column; gap:12px">
+          <div class="btn btn-p">Retour aux pièces (2 à corriger)</div>
+          <span class="link">Enregistrer et terminer plus tard</span>
+        </div>
+      </div>
+      <div class="homebar"><i></i></div>
+    </div>
+  </a>
+</div>
+
+<!-- ================= MOBILE 3 + 4 ================= -->
+<div class="row">
+
+  <a class="frame" id="f-us01-succes" href="#f-us01-succes">
+    <div class="flabel"><span class="name">US-01 Dépôt — confirmation</span><span class="dim">390 × 844</span>
+      <span class="tags"><span class="tag">US-01</span><span class="tag">US-03</span><span class="tag">US-13</span><span class="tag">RG-04</span></span></div>
+    <div class="artboard mobile">
+      <div class="statusbar"><span>9:41</span><span class="ics"><i class="sbar-ic"></i><i class="sbar-ic"></i><i class="sbar-ic" style="width:20px"></i></span></div>
+      <div class="appbar"><span class="ttl">Ma demande</span><span class="spacer"></span><span class="icbtn">✕</span></div>
+      <div class="body" style="align-items:center; text-align:center">
+        <div style="width:72px; height:72px; border-radius:50%; background:#1c1c1c; color:#fff;
+                    display:flex; align-items:center; justify-content:center; font-size:32px; margin-top:18px">✓</div>
+        <div>
+          <div class="h2" style="font-size:19px">Demande envoyée avec succès</div>
+          <div class="note" style="margin-top:4px">Vous allez recevoir un SMS et un e-mail de confirmation (RG-04).</div>
+        </div>
+        <div class="panel g" style="width:100%; text-align:left">
+          <div class="note">Numéro de dossier — à conserver</div>
+          <div style="font:700 26px 'Consolas', monospace; letter-spacing:1px; margin:4px 0 10px">BE-2026-11847</div>
+          <div class="kv" style="gap:14px">
+            <div><div class="k">Déposée le</div><div class="v">12 nov. 2026</div></div>
+            <div><div class="k">Canal</div><div class="v">En ligne</div></div>
+            <div><div class="k">Montant</div><div class="v">15 000 DT</div></div>
+          </div>
+          <div style="margin-top:12px"><div class="btn btn-s" style="height:44px">⇩ Télécharger le récépissé (PDF)</div></div>
+        </div>
+        <div style="width:100%; text-align:left">
+          <div class="h2" style="font-size:13px; margin-bottom:8px">Prochaines étapes</div>
+          <div class="stepper">
+            <div class="step done"><span class="dot">✓</span><span class="lbl">Contrôle auto</span></div>
+            <div class="step act"><span class="dot">2</span><span class="lbl">Instruction</span></div>
+            <div class="step"><span class="dot">3</span><span class="lbl">Comité</span></div>
+          </div>
+        </div>
+        <div style="margin-top:auto; width:100%">
+          <div class="btn btn-p">Suivre ma demande</div>
+        </div>
+      </div>
+      <div class="homebar"><i></i></div>
+    </div>
+  </a>
+
+  <a class="frame" id="f-us02-suivi" href="#f-us02-suivi">
+    <div class="flabel"><span class="name">US-02 Suivi</span><span class="dim">390 × 844</span>
+      <span class="tags"><span class="tag">US-02</span><span class="tag">US-14</span><span class="tag">RG-03</span><span class="tag">RG-04</span></span></div>
+    <div class="artboard mobile">
+      <div class="statusbar"><span>9:41</span><span class="ics"><i class="sbar-ic"></i><i class="sbar-ic"></i><i class="sbar-ic" style="width:20px"></i></span></div>
+      <div class="appbar">
+        <span class="ttl">Suivi de demande</span><span class="spacer"></span>
+        <span class="tag" style="border-color:#1c1c1c; color:#1c1c1c; background:#fff">FR | AR</span>
+      </div>
+      <div class="body tight">
+        <div class="panel g">
+          <div class="kv">
+            <div><div class="k">Dossier</div><div class="v">BE-2026-11847</div></div>
+            <div><div class="k">Type</div><div class="v">Consommation</div></div>
+            <div><div class="k">Montant</div><div class="v">15 000 DT / 36 m</div></div>
+          </div>
+          <div style="margin-top:10px; display:flex; align-items:center; gap:8px">
+            <span class="pill solid">En instruction</span><span class="note">transmis au siège le 13 nov.</span>
+          </div>
+        </div>
+        <div class="alert" style="padding:10px 12px; align-items:center">
+          <span>▲</span>
+          <div style="flex:1"><div class="t" style="font-size:13.5px">1 pièce manquante : attestation de travail</div></div>
+          <span class="mini">Compléter</span>
+        </div>
+        <div class="panel">
+          <div class="h2" style="font-size:13px; margin-bottom:10px">Parcours du dossier</div>
+          <div class="tl">
+            <div class="tl-i"><span class="tl-d">✓</span>
+              <div class="tl-c"><div class="t">Déposé</div><div class="d">12 nov. 09:40 — récépissé n° BE-2026-11847</div></div></div>
+            <div class="tl-i"><span class="tl-d">✓</span>
+              <div class="tl-c"><div class="t">En instruction</div><div class="d">13 nov. 10:12 — étude au siège</div></div></div>
+            <div class="tl-i"><span class="tl-d" style="background:#fff; border:2px solid #1c1c1c; color:#1c1c1c">●</span>
+              <div class="tl-c"><div class="t">Au comité</div><div class="d">en cours</div><span class="prev">◷ Date prévue : 16 nov. 2026</span></div></div>
+            <div class="tl-i future"><span class="tl-d">◷</span>
+              <div class="tl-c"><div class="t" style="color:var(--ink3)">Décision</div><div class="d">notification automatique dès le verdict (RG-04)</div></div></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="h2" style="font-size:13px">Notifications reçues</div>
+          <div class="notif"><span class="ch">SMS</span><div class="w"><div class="t">Votre dossier est en instruction</div><div class="d">13 nov. 10:12</div></div></div>
+          <div class="notif"><span class="ch">E-mail</span><div class="w"><div class="t">Pièce manquante : attestation de travail</div><div class="d">13 nov. 15:45</div></div></div>
+          <div class="notif"><span class="ch">Rappel</span><div class="w"><div class="t">Relance automatique J+7 programmée (US-14)</div><div class="d">si aucune action</div></div></div>
+        </div>
+      </div>
+      <div class="homebar"><i></i></div>
+    </div>
+  </a>
+</div>
+
+<!-- ================= MOBILE 5 + 6 : arabe RTL + état vide ================= -->
+<div class="row">
+
+  <a class="frame" id="f-us03-arabe" href="#f-us03-arabe">
+    <div class="flabel"><span class="name">US-03 Portail en arabe — miroir RTL</span><span class="dim">390 × 844</span>
+      <span class="tags"><span class="tag">US-03</span><span class="tag">RG-07</span><span class="tag">RG-04</span></span></div>
+    <div class="artboard mobile rtl">
+      <div class="statusbar"><span>9:41</span><span class="ics"><i class="sbar-ic"></i><i class="sbar-ic"></i><i class="sbar-ic" style="width:20px"></i></span></div>
+      <div class="appbar">
+        <span class="ttl">تتبع الطلب</span><span class="spacer"></span>
+        <span class="tag" style="border-color:#1c1c1c; color:#1c1c1c; background:#fff">AR | FR</span>
+      </div>
+      <div class="body tight">
+        <div class="panel g">
+          <div class="kv">
+            <div><div class="k">الملف</div><div class="v">BE-2026-11847</div></div>
+            <div><div class="k">النوع</div><div class="v">استهلاك</div></div>
+            <div><div class="k">المبلغ</div><div class="v">15 000 DT / 36 شهر</div></div>
+          </div>
+          <div style="margin-top:10px; display:flex; align-items:center; gap:8px">
+            <span class="pill solid">قيد الدراسة</span><span class="note">أُرسل إلى المقر المركزي في 13 نوفمبر</span>
+          </div>
+        </div>
+        <div class="alert" style="padding:10px 12px; align-items:center">
+          <span>▲</span>
+          <div style="flex:1"><div class="t" style="font-size:13.5px">وثيقة ناقصة: شهادة العمل</div></div>
+          <span class="mini">إكمال</span>
+        </div>
+        <div class="panel">
+          <div class="h2" style="font-size:13px; margin-bottom:10px">مسار الملف</div>
+          <div class="tl">
+            <div class="tl-i"><span class="tl-d">✓</span>
+              <div class="tl-c"><div class="t">تم الإيداع</div><div class="d">12 نوفمبر 09:40 —وصل رقم BE-2026-11847</div></div></div>
+            <div class="tl-i"><span class="tl-d">✓</span>
+              <div class="tl-c"><div class="t">قيد الدراسة</div><div class="d">13 نوفمبر 10:12 — الدراسة بالمقر المركزي</div></div></div>
+            <div class="tl-i"><span class="tl-d" style="background:#fff; border:2px solid #1c1c1c; color:#1c1c1c">●</span>
+              <div class="tl-c"><div class="t">لدى اللجنة</div><span class="prev">◷ التاريخ المتوقع: 16 نوفمبر 2026</span></div></div>
+            <div class="tl-i future"><span class="tl-d">◷</span>
+              <div class="tl-c"><div class="t" style="color:var(--ink3)">القرار</div><div class="d">إشعار آلي فور القرار (RG-04)</div></div></div>
+          </div>
+        </div>
+        <div class="hintbox">◉ Mise en miroir RTL (RG-07) : contenu et fonctionnalités <b>identiques</b> à la frame
+          « US-02 Suivi » — navigation, alignements et icônes directionnelles inversés, libellés des pièces traduits.</div>
+      </div>
+      <div class="homebar"><i></i></div>
+    </div>
+  </a>
+
+  <a class="frame" id="f-us02-vide" href="#f-us02-vide">
+    <div class="flabel"><span class="name">US-02 Suivi — état vide</span><span class="dim">390 × 844</span>
+      <span class="tags"><span class="tag">US-02</span><span class="tag">US-01</span><span class="tag">RG-01</span></span></div>
+    <div class="artboard mobile">
+      <div class="statusbar"><span>9:41</span><span class="ics"><i class="sbar-ic"></i><i class="sbar-ic"></i><i class="sbar-ic" style="width:20px"></i></span></div>
+      <div class="appbar">
+        <span class="ttl">Mes demandes</span><span class="spacer"></span>
+        <span class="tag" style="border-color:#1c1c1c; color:#1c1c1c; background:#fff">FR | AR</span>
+      </div>
+      <div class="body">
+        <div class="empty">
+          <span class="big">◌</span>
+          <div>
+            <div class="h2" style="font-size:16px">Aucune demande en cours</div>
+            <div class="note" style="margin-top:4px">Vos demandes déposées ici et au guichet apparaîtront dans cette liste.</div>
+          </div>
+          <div class="btn btn-p" style="width:100%">Faire une demande</div>
+        </div>
+        <div class="resume">
+          <span class="thumb">▤</span>
+          <div style="flex:1">
+            <div class="nm">Brouillon — Crédit consommation</div>
+            <div class="hint">Étape 2 « Pièces » · 2 conformes sur 4 · interrompu le 11 nov.</div>
+          </div>
+          <span class="mini">Reprendre</span>
+        </div>
+        <div class="hintbox">Le suivi est le même quel que soit le canal de dépôt (RG-02) : un dossier créé au guichet
+          par un agent apparaît ici avec son numéro et sa timeline.</div>
+      </div>
+      <div class="homebar"><i></i></div>
+    </div>
+  </a>
+</div>
+
+<!-- ================= DESKTOP 1 ================= -->
+<div class="row">
+  <a class="frame" id="f-us08-dashboard" href="#f-us08-dashboard">
+    <div class="flabel"><span class="name">US-08 Tableau de bord analyste</span><span class="dim">1440 × 900</span>
+      <span class="tags"><span class="tag">US-07</span><span class="tag">US-08</span><span class="tag">US-10</span><span class="tag">RG-03</span><span class="tag">RG-04</span><span class="tag">RG-05</span></span></div>
+    <div class="artboard desktop">
+      <div class="topbar">
+        <span class="logo">BANQUE ELYSSA</span>
+        <span class="crumb">Siège — Étude crédit</span>
+        <span class="search">⌕ Rechercher un dossier, un client…</span>
+        <span class="user"><span class="avatar">KG</span> Karim Gharbi · Analyste</span>
+      </div>
+      <div class="desk-wrap">
+        <nav class="side">
+          <div class="nav-i on">▤ File de travail <span class="bdg">12</span></div>
+          <div class="nav-i">▤ Mes dossiers</div>
+          <div class="nav-i">▤ Journal <span class="bdg" style="background:#efefef">RG-05</span></div>
+          <div class="nav-i">◔ Indicateurs <span class="bdg" style="background:#efefef">EF-09</span></div>
+          <div class="sep"></div>
+          <div class="nav-i">⚙ Référentiel des pièces</div>
+        </nav>
+        <div class="main">
+          <div class="col-l">
+            <div style="display:flex; align-items:baseline; gap:12px">
+              <span class="d-h1">File de travail</span>
+              <span class="note">triée par ancienneté — les transitions affichées dépendent de l'état (RG-03)</span>
+            </div>
+            <div class="filters">
+              <span class="f-sel">État : À instruire ▾</span>
+              <span class="f-sel">Ancienneté : &gt; 3 jours ▾</span>
+              <span class="f-sel">Type : Tous ▾</span>
+              <span class="hint" style="margin-left:auto">◷ Actualisée en continu — plus de reporting mensuel manuel (EF-09)</span>
+            </div>
+            <table class="tbl">
+              <tr><th>N° dossier</th><th>Client</th><th>Type</th><th>Montant</th><th>Déposé le</th><th>Âge</th><th>État</th><th>Action</th></tr>
+              <tr class="sel"><td><b>BE-2026-11847</b></td><td>Sami Ben Ammar</td><td>Conso</td><td>15 000 DT</td><td>12 nov.</td><td>4 j</td>
+                  <td><span class="pill solid">À instruire</span></td><td><span class="rowbtn">Instruire</span></td></tr>
+              <tr><td>BE-2026-11852</td><td>Yasmine Hamdi</td><td>Conso</td><td>8 500 DT</td><td>12 nov.</td><td>4 j</td>
+                  <td><span class="pill">En instruction</span></td><td>—</td></tr>
+              <tr><td>BE-2026-11861</td><td>Riadh Gharbi</td><td>PME</td><td>60 000 DT</td><td>11 nov.</td><td>5 j</td>
+                  <td><span class="pill dash">Incomplet</span></td><td><span class="rowbtn">Relancer</span></td></tr>
+              <tr><td>BE-2026-11858</td><td>Marwa Khelifi</td><td>Conso</td><td>22 000 DT</td><td>10 nov.</td><td>6 j</td>
+                  <td><span class="pill">Au comité</span></td><td>—</td></tr>
+              <tr><td>BE-2026-11840</td><td>Hédi Ayari</td><td>PME</td><td>45 000 DT</td><td>09 nov.</td><td>7 j</td>
+                  <td><span class="pill solid">À instruire</span></td><td><span class="rowbtn">Instruire</span></td></tr>
+              <tr><td>BE-2026-11836</td><td>Salma Bouden</td><td>Conso</td><td>12 000 DT</td><td>09 nov.</td><td>7 j</td>
+                  <td><span class="pill dash">Incomplet</span></td><td><span class="rowbtn">Relancer</span></td></tr>
+            </table>
+            <div class="hintbox">Ligne sélectionnée = dossier affiché à droite. Les boutons d'action ne proposent que les
+              transitions autorisées par l'état courant (RG-03) — fin des « statuts fantaisistes ».</div>
+            <div>
+              <div class="h2" style="font-size:14px; margin-bottom:8px">Indicateurs de la semaine</div>
+              <div class="kpis">
+                <div class="kpi"><div class="n">4,2 j</div><div class="l">délai moyen de décision (cible ≤ 5 j)</div></div>
+                <div class="kpi"><div class="n">82 %</div><div class="l">dossiers complets dès le dépôt (cible ≥ 90 %)</div></div>
+                <div class="kpi"><div class="n">37</div><div class="l">dossiers instruits cette semaine</div></div>
+                <div class="kpi"><div class="n">≈ 2 200</div><div class="l">appels de suivi évités / semaine</div></div>
+              </div>
+              <div class="hint" style="margin-top:6px">Calculés en continu depuis le dossier unique (EF-09) — plus de reporting mensuel refait à la main.</div>
+            </div>
+          </div>
+          <div class="col-r">
+            <div class="d-h1" style="font-size:15px">BE-2026-11847 — Sami Ben Ammar</div>
+            <div class="tabs">
+              <span class="tab on">Dossier</span><span class="tab">Historique client</span><span class="tab">Journal</span>
+            </div>
+            <div class="panel g">
+              <div class="kv">
+                <div><div class="k">Type</div><div class="v">Consommation</div></div>
+                <div><div class="k">Montant</div><div class="v">15 000 DT</div></div>
+                <div><div class="k">Durée</div><div class="v">36 mois</div></div>
+                <div><div class="k">Déposé</div><div class="v">12 nov. (en ligne)</div></div>
+              </div>
+            </div>
+            <div>
+              <div class="h2" style="font-size:13px; margin-bottom:8px">Pièces du dossier</div>
+              <div class="pgrid">
+                <div class="pcell"><div class="th">✔</div><div class="lb">CIN<br>reçue</div></div>
+                <div class="pcell"><div class="th">✔</div><div class="lb">Fiches de paie<br>reçue</div></div>
+                <div class="pcell"><div class="th" style="border-width:2px; border-color:#1c1c1c">▲</div><div class="lb">Attestation<br>manquante</div></div>
+                <div class="pcell"><div class="th" style="border-style:dashed">┄</div><div class="lb">Relevé<br>refusé</div></div>
+              </div>
+              <div class="hint" style="margin-top:6px">Le contrôle automatique a déjà qualifié chaque pièce (US-06) — l'analyste
+                lit, il ne re-vérifie pas.</div>
+            </div>
+            <div>
+              <div class="h2" style="font-size:13px; margin-bottom:6px">Avis d'instruction <span class="note">— obligatoire avant transmission</span></div>
+              <textarea class="ta">Rédiger l'avis : capacité de remboursement, incident éventuel, recommandation…</textarea>
+            </div>
+            <div class="btn-row">
+              <span class="btn btn-s" style="height:44px">Demander une pièce</span>
+              <span class="btn btn-p" style="height:44px">Transmettre au comité</span>
+            </div>
+            <div class="hint">Chaque transition horodatée écrit au journal (RG-05) et notifie le client (RG-04).</div>
+            <div class="panel">
+              <div class="h2" style="font-size:13px; margin-bottom:4px">Activité récente — journal <span class="note">lecture seule (RG-05)</span></div>
+              <div class="notif"><span class="ch">14 nov</span><div class="w"><div class="t">Avis d'instruction saisi par K. Gharbi</div><div class="d">BE-2026-11847 · 09:03</div></div></div>
+              <div class="notif"><span class="ch">13 nov</span><div class="w"><div class="t">Relance « pièce manquante » envoyée au client</div><div class="d">BE-2026-11847 · 15:45 · automatique (RG-04)</div></div></div>
+              <div class="notif"><span class="ch">13 nov</span><div class="w"><div class="t">Dossier transmis agence → siège</div><div class="d">BE-2026-11847 · 10:12 · sans intervention humaine</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<!-- ================= DESKTOP 2 ================= -->
+<div class="row">
+  <a class="frame" id="f-us04-agence" href="#f-us04-agence">
+    <div class="flabel"><span class="name">US-04 Dépôt assisté agence</span><span class="dim">1440 × 900</span>
+      <span class="tags"><span class="tag">US-04</span><span class="tag">RG-02</span><span class="tag">RG-04</span></span></div>
+    <div class="artboard desktop">
+      <div class="topbar">
+        <span class="logo">BANQUE ELYSSA</span>
+        <span class="crumb">Agence Lafayette — Accueil</span>
+        <span class="search">⌕ Rechercher un client…</span>
+        <span class="user"><span class="avatar">AT</span> Amira Trabelsi · Agent d'accueil</span>
+      </div>
+      <div class="desk-wrap">
+        <nav class="side">
+          <div class="nav-i on">▤ Nouvelle demande</div>
+          <div class="nav-i">▤ Demandes de la journée</div>
+          <div class="nav-i">▤ Réception des pièces</div>
+          <div class="sep"></div>
+          <div class="nav-i">◔ Mes statistiques</div>
+        </nav>
+        <div class="main" style="flex-direction:column">
+          <div class="dstepper">
+            <div class="dstep done"><span class="dot">✓</span> 1 · Client identifié</div>
+            <div class="dstep act"><span class="dot">2</span> 2 · Formulaire commun</div>
+            <div class="dstep"><span class="dot">3</span> 3 · Récapitulatif &amp; récépissé</div>
+          </div>
+          <div style="display:flex; gap:18px; flex:1; min-height:0">
+            <div class="col-l" style="flex:1.9">
+              <div class="panel g" style="display:flex; gap:14px; align-items:center">
+                <span class="avatar" style="width:44px; height:44px; font-size:15px">SB</span>
+                <div style="flex:1">
+                  <div style="font-weight:700; font-size:15px">Sami Ben Ammar</div>
+                  <div class="note">CIN 09******12 · client depuis 2018 · 1 crédit en cours — historique consultable (US-08)</div>
+                </div>
+                <span class="pill solid">Client existant — aucun doublon créé</span>
+              </div>
+              <div style="display:flex; gap:12px">
+                <div class="field" style="flex:1"><label>Type de crédit</label><div class="inp">Crédit consommation ▾</div></div>
+                <div class="field" style="flex:1"><label>Montant demandé</label><div class="inp">15 000 DT</div></div>
+                <div class="field" style="flex:1"><label>Durée</label><div class="inp">36 mois ▾</div></div>
+              </div>
+              <div>
+                <div class="h2" style="font-size:13px; margin-bottom:8px">Pièces justificatives — <span class="note">même checklist que le canal en ligne,
+                  générée depuis le référentiel (RG-01)</span></div>
+                <div class="doc" style="margin-bottom:8px">
+                  <span class="thumb">▤</span>
+                  <div><div class="nm">CIN — recto-verso</div><div class="hint">scannée à l'agence</div></div>
+                  <span class="st st-ok">✔ Reçue</span>
+                </div>
+                <div class="doc" style="margin-bottom:8px">
+                  <span class="thumb">▤</span>
+                  <div><div class="nm">Fiches de paie × 3</div><div class="hint">reçues par portail client</div></div>
+                  <span class="st st-ok">✔ Reçue</span>
+                </div>
+                <div class="doc" style="border-style:dashed">
+                  <span class="thumb">▤</span>
+                  <div>
+                    <div class="nm">Attestation de travail</div>
+                    <div class="acts"><span class="mini">◉ Scanner</span><span class="mini">⇪ Téléverser</span></div>
+                  </div>
+                  <span class="st st-mq">Manquante</span>
+                </div>
+              </div>
+              <div class="btn-row">
+                <span class="btn btn-s" style="height:46px">Imprimer le récépissé</span>
+                <span class="btn btn-p" style="height:46px">Soumettre la demande</span>
+              </div>
+            </div>
+            <div class="col-r" style="flex:1">
+              <div class="d-h1" style="font-size:14px">Après la soumission</div>
+              <div class="panel">
+                <div class="note">Récépissé envoyé par <b>SMS</b> au client</div>
+                <div style="font:700 22px 'Consolas', monospace; letter-spacing:1px; margin:6px 0">BE-2026-11852</div>
+                <div class="note">même sans compte portail — le client repart avec une preuve en main (RG-04).</div>
+              </div>
+              <div class="hintbox"><b>Ce qui disparaît :</b> la fiche papier. Une seule saisie, un dossier unique,
+                immédiatement visible au siège (RG-02) — fin des triples saisies fiche / Excel / compte-rendu.</div>
+              <div class="hintbox"><b>Ce qui ne change pas :</b> le conseiller accompagne le client, pièce par pièce.
+                L'outil assiste, il ne remplace pas l'accueil.</div>
+              <div class="panel g">
+                <div class="h2" style="font-size:13px; margin-bottom:6px">File agence en temps réel</div>
+                <div class="kv">
+                  <div><div class="k">Aujourd'hui</div><div class="v">6 demandes</div></div>
+                  <div><div class="k">Complètes dès le dépôt</div><div class="v">5 / 6</div></div>
+                  <div><div class="k">Délai moyen dépôt → siège</div><div class="v">≈ 0 j</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<!-- ================= DESKTOP 3 : référentiel ================= -->
+<div class="row">
+  <a class="frame" id="f-us05-referentiel" href="#f-us05-referentiel">
+    <div class="flabel"><span class="name">US-05 Référentiel des pièces</span><span class="dim">1440 × 900</span>
+      <span class="tags"><span class="tag">US-05</span><span class="tag">US-06</span><span class="tag">RG-01</span></span></div>
+    <div class="artboard desktop">
+      <div class="topbar">
+        <span class="logo">BANQUE ELYSSA</span>
+        <span class="crumb">Direction des risques</span>
+        <span class="search">⌕ Rechercher une pièce, un type de crédit…</span>
+        <span class="user"><span class="avatar">NR</span> Nadia Rouis · Responsable des risques</span>
+      </div>
+      <div class="desk-wrap">
+        <nav class="side">
+          <div class="nav-i on">⚙ Référentiel des pièces</div>
+          <div class="nav-i">▤ Types de crédit</div>
+          <div class="nav-i">◔ Indicateurs <span class="bdg" style="background:#efefef">EF-09</span></div>
+          <div class="sep"></div>
+          <div class="nav-i">▤ Journal global <span class="bdg" style="background:#efefef">RG-05</span></div>
+        </nav>
+        <div class="main">
+          <div class="col-l">
+            <div style="display:flex; align-items:baseline; gap:12px">
+              <span class="d-h1">Pièces exigées — Crédit consommation</span>
+              <span class="f-sel">Type : Consommation ▾</span>
+            </div>
+            <table class="tbl">
+              <tr><th>Pièce</th><th>Obligatoire</th><th>Formats acceptés</th><th>Canal agence</th><th>Contrôle auto</th></tr>
+              <tr><td><b>CIN — recto-verso</b></td><td><span class="toggle on"></span></td><td>JPG · PDF ≤ 5 Mo</td>
+                  <td><span class="toggle on"></span></td><td><span class="pill">lisibilité</span></td></tr>
+              <tr><td><b>Fiches de paie × 3 mois</b></td><td><span class="toggle on"></span></td><td>JPG · PDF</td>
+                  <td><span class="toggle on"></span></td><td><span class="pill">récence ≤ 90 j</span></td></tr>
+              <tr><td><b>Attestation de travail</b></td><td><span class="toggle on"></span></td><td>JPG · PDF</td>
+                  <td><span class="toggle on"></span></td><td>—</td></tr>
+              <tr class="sel"><td><b>Attestation de revenus <span class="pill solid">nouvelle</span></b></td>
+                  <td><span class="toggle on"></span></td><td>PDF ≤ 5 Mo</td>
+                  <td><span class="toggle"></span></td><td><span class="pill">montant ≥ seuil</span></td></tr>
+              <tr><td>Relevé de compte — 6 mois</td><td><span class="toggle"></span></td><td>PDF</td>
+                  <td><span class="toggle on"></span></td><td><span class="pill">lisibilité</span></td></tr>
+            </table>
+            <div class="btn-row" style="max-width:520px">
+              <span class="btn btn-s" style="height:44px">+ Ajouter une pièce</span>
+              <span class="btn btn-p" style="height:44px">Enregistrer le référentiel</span>
+            </div>
+            <div class="hintbox">La case « Attestation de revenus » vient d'être cochée comme <b>obligatoire</b> :
+              dès l'enregistrement, toute nouvelle demande de ce type l'exige au dépôt (RG-01) — la checklist du
+              mobile (US-01) et du guichet (US-04) se régénère depuis cette seule table. Plus de liste dans un tableur local.</div>
+          </div>
+          <div class="col-r">
+            <div class="d-h1" style="font-size:15px">Aperçu avant enregistrement</div>
+            <div class="panel">
+              <div class="h2" style="font-size:13px; margin-bottom:8px">Checklist d'une nouvelle demande conso</div>
+              <div class="doc" style="margin-bottom:8px"><span class="thumb">▤</span>
+                <div><div class="nm">Attestation de revenus</div><div class="hint">nouvelle pièce exigée dès le dépôt</div></div>
+                <span class="st st-mq">Manquante</span></div>
+              <div class="note">3 autres pièces conformes — la soumission serait bloquée (US-06) avec la règle affichée.</div>
+            </div>
+            <div class="alert" style="padding:12px">
+              <span>◷</span>
+              <div>
+                <div class="t" style="font-size:13.5px">Impact sur les dossiers en cours</div>
+                <div class="note" style="margin-top:2px">17 dossiers déjà déposés : <b>avertissement affiché, aucun
+                blocage rétroactif</b> — la règle ne s'applique qu'aux nouvelles demandes (US-05).</div>
+              </div>
+            </div>
+            <div class="panel g">
+              <div class="h2" style="font-size:13px; margin-bottom:6px">Journal du référentiel <span class="note">lecture seule (RG-05)</span></div>
+              <div class="notif"><span class="ch">hier</span><div class="w"><div class="t">« Attestation de revenus » rendue obligatoire (conso)</div><div class="d">N. Rouis · 16:22</div></div></div>
+              <div class="notif"><span class="ch">02 oct</span><div class="w"><div class="t">Seuil second justificatif de revenu : 20 000 DT</div><div class="d">N. Rouis · 09:05 · motif : directive risques</div></div></div>
+            </div>
+            <div class="hint">Chaque modification est horodatée, motivée et conserve 10 ans (RG-05).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<!-- ================= DESKTOP 4 : comité ================= -->
+<div class="row">
+  <a class="frame" id="f-us09-comite" href="#f-us09-comite">
+    <div class="flabel"><span class="name">US-09 Passage en comité — décision</span><span class="dim">1440 × 900</span>
+      <span class="tags"><span class="tag">US-09</span><span class="tag">US-07</span><span class="tag">US-10</span><span class="tag">RG-03</span><span class="tag">RG-04</span></span></div>
+    <div class="artboard desktop">
+      <div class="topbar">
+        <span class="logo">BANQUE ELYSSA</span>
+        <span class="crumb">Comité de crédit — séance du 16 nov.</span>
+        <span class="search">⌕ Rechercher un dossier…</span>
+        <span class="user"><span class="avatar">FB</span> Fatma Belkadi · Membre du comité</span>
+      </div>
+      <div class="desk-wrap">
+        <nav class="side">
+          <div class="nav-i on">▤ Ordre du jour <span class="bdg">5</span></div>
+          <div class="nav-i">▤ Décisions rendues</div>
+          <div class="nav-i">▤ Journal <span class="bdg" style="background:#efefef">RG-05</span></div>
+        </nav>
+        <div class="main">
+          <div class="col-l">
+            <div style="display:flex; align-items:baseline; gap:12px">
+              <span class="d-h1">Ordre du jour — 16 nov. 2026</span>
+              <span class="note">dossiers « au comité » uniquement (RG-03)</span>
+            </div>
+            <table class="tbl">
+              <tr><th>N° dossier</th><th>Client</th><th>Montant</th><th>Avis analyste</th><th>Wait</th><th>État</th></tr>
+              <tr class="sel"><td><b>BE-2026-11858</b></td><td>Marwa Khelifi</td><td>22 000 DT</td>
+                  <td><span class="pill">favorable</span></td><td>6 j</td><td><span class="pill solid">Au comité</span></td></tr>
+              <tr><td>BE-2026-11833</td><td>Anis Marzouki</td><td>18 000 DT</td>
+                  <td><span class="pill">favorable</span></td><td>8 j</td><td><span class="pill solid">Au comité</span></td></tr>
+              <tr><td>BE-2026-11829</td><td>Nejla Sassi</td><td>55 000 DT</td>
+                  <td><span class="pill dash">réservé</span></td><td>9 j</td><td><span class="pill solid">Au comité</span></td></tr>
+              <tr><td>BE-2026-11821</td><td>Oussama Jaziri</td><td>9 000 DT</td>
+                  <td><span class="pill">défavorable</span></td><td>10 j</td><td><span class="pill solid">Au comité</span></td></tr>
+            </table>
+            <div class="d-h1" style="font-size:15px; margin-top:6px">BE-2026-11858 — Marwa Khelifi · tout est là, sans changer le processus du comité</div>
+            <div class="panel g">
+              <div class="kv">
+                <div><div class="k">Type</div><div class="v">Consommation</div></div>
+                <div><div class="k">Montant</div><div class="v">22 000 DT</div></div>
+                <div><div class="k">Durée</div><div class="v">48 mois</div></div>
+                <div><div class="k">Déposé</div><div class="v">10 nov. (guichet)</div></div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="h2" style="font-size:13px; margin-bottom:6px">Avis d'instruction — K. Gharbi, 15 nov.</div>
+              <div class="note">Capacité de remboursement conforme (reste à vivre 640 DT). Second justificatif de revenu
+                fourni (règle &gt; 20 000 DT). Aucun incident depuis 2021. Avis favorable.</div>
+              <div class="pgrid" style="margin-top:10px">
+                <div class="pcell"><div class="th">✔</div><div class="lb">CIN</div></div>
+                <div class="pcell"><div class="th">✔</div><div class="lb">Fiches ×3</div></div>
+                <div class="pcell"><div class="th">✔</div><div class="lb">Attestation</div></div>
+                <div class="pcell"><div class="th">✔</div><div class="lb">Attest. revenus</div></div>
+                <div class="pcell"><div class="th">✔</div><div class="lb">Relevé 6 m</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-r">
+            <div class="d-h1" style="font-size:15px">Historique client <span class="note">onglet US-08</span></div>
+            <div class="panel">
+              <div class="notif"><span class="ch">2021</span><div class="w"><div class="t">Conso 9 000 DT — soldé sans incident</div><div class="d">36 échéances honorées</div></div></div>
+              <div class="notif"><span class="ch">en cours</span><div class="w"><div class="t">Conso 7 500 DT — 14/24 échéances</div><div class="d">à jour</div></div></div>
+              <div class="notif"><span class="ch">2023</span><div class="w"><div class="t">Incident : 2 échéances impayées</div><div class="d">régularisé sous 60 j</div></div></div>
+            </div>
+            <div class="panel">
+              <div class="h2" style="font-size:13px; margin-bottom:8px">Décision <span class="note">— saisie manuellement par le comité (inchangé, US-09)</span></div>
+              <div class="stack-cards">
+                <div class="radio-card on"><span class="rd"></span><div><div class="rt">Accord</div><div class="rs">22 000 DT · 48 mois</div></div></div>
+                <div class="radio-card"><span class="rd"></span><div><div class="rt">Refus</div><div class="rs">motif obligatoire, visible dans le journal</div></div></div>
+                <div class="radio-card"><span class="rd"></span><div><div class="rt">Accord modifié</div><div class="rs">montant ou durée ajustés</div></div></div>
+              </div>
+              <textarea class="ta" style="height:56px; margin-top:10px">Commentaire de décision (obligatoire — tracé au journal, RG-05)…</textarea>
+              <div class="btn btn-p" style="height:44px; margin-top:10px">Acter la décision</div>
+              <div class="hint">État → « décidé », puis notification immédiate du client par SMS + e-mail
+                (RG-04) et entrée de journal horodatée (RG-05) — plus de décision « dormante dans un tiroir » (B05).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<footer style="max-width:1480px; margin:0 auto; color:var(--ink2); font-size:12.5px">
+  Wireframes low-fi — Banque Elyssa (cas fictif) · traçabilité : chaque frame référence ses user stories et règles de
+  gestion · sources : <code>to-be-processus.md</code>, <code>user-stories-backlog.md</code>, <code>BRD.md</code>.
+</footer>
+
+<script>
+/* mode export : ?only=<id de frame> n'affiche qu'une seule frame (captures PNG) */
+(function(){
+  var p = new URLSearchParams(location.search).get('only');
+  if(!p) return;
+  document.querySelectorAll('a.frame').forEach(function(a){
+    if(a.id !== p) a.style.display = 'none';
+  });
+  var h = document.querySelector('.pagehead'), f = document.querySelector('footer');
+  if(h) h.style.display = 'none';
+  if(f) f.style.display = 'none';
+  document.body.style.padding = '12px';
+  var r = document.querySelector('.row');
+  if(r) r.style.margin = '0';
+})();
+</script>
+
+</body>
+</html>

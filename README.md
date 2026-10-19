@@ -23,12 +23,12 @@ Ma mission : produire le dossier d'analyse complet d'un parcours digitalisé.
 | `02-Elicitation/` | Personas, guides d'entretien, synthèse des constats | S1–S2 |
 | `03-Analyse/` | AS-IS BPMN, matrice des douleurs, causes racines, BRD | S2–S3 |
 | `04-Exigences/` | User stories, critères d'acceptation, backlog MoSCoW | S4 |
-| `05-Solution/` | TO-BE BPMN, wireframes Figma | S5 |
+| `05-Solution/` | TO-BE BPMN, [wireframes low-fi — 12 écrans](05-Solution/wireframes/README.md) | S5 |
 | `06-Restitution/` | Business case, matrice de traçabilité, synthèse executive | S6 |
 
 ## Outils utilisés
 
-Bizagi Modeler (BPMN) · Figma (wireframes) · Jira (backlog) · Draw.io · PowerPoint/Canva
+Bizagi Modeler (BPMN) · HTML/CSS (wireframes low-fi, version interactive : [`wireframes.html`](05-Solution/wireframes.html)) · Jira (backlog) · Draw.io · PowerPoint/Canva
 
 ## Résultats clés (cibles du processus cible)
 
