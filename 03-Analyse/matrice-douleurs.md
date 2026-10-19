@@ -27,15 +27,12 @@ d'une douleur héritent du constat le plus sévère de son groupe. Score = F × 
 
 ## 3. Quadrant fréquence × gravité
 
-```
- Gravité élevée │   D7 · D8        │   D1 · D2 · D4
-                │                  │
- Gravité moyenne │                  │   D3 · D5 · D6
-                └──────────────────┴────────────────────
-                  Fréquence moyenne     Fréquence élevée
-```
+|  | Fréquence moyenne | Fréquence élevée |
+|---|---|---|
+| **Gravité élevée** | D7 · D8 | **D1 · D2 · D4 — zone prioritaire** |
+| **Gravité moyenne** | — | D3 · D5 · D6 |
 
-**Zone rouge (haute fréquence + haute gravité) : D1, D2, D4.** C'est là que le
+La **zone prioritaire** (haute fréquence + haute gravité) : D1, D2, D4. C'est là que le
 projet doit commencer. D7 rejoint la priorité malgré une fréquence moyenne, car
 le risque est réglementaire : une décision contestée non justifiable peut coûter
 plus cher qu'un mois de retards.
