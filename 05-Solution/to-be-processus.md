@@ -5,7 +5,7 @@
 [user stories](../04-Exigences/user-stories-backlog.md)
 
 > Cas fictif — Banque Elyssa. Processus **cible** (TO-BE) tel que défini par les
-> exigences EF-01 à EF-10. Diagramme à insérer ici après export Bizagi.
+> exigences EF-01 à EF-10.
 
 ## 1. Ce qui change par rapport à l'AS-IS
 
@@ -58,13 +58,13 @@
 
 ## 5. Diagramme
 
-Le fichier [`Banque-Elyssa_TO-BE.bpmn`](Banque-Elyssa_TO-BE.bpmn) s'importe dans
-Bizagi Modeler (**Fichier → Importer → BPMN 2.0**). Après import :
+![Processus cible TO-BE — modélisé sous Bizagi Modeler](to-be-processus.png)
 
-1. vérifier les 5 couloirs et les étiquettes des flux ;
-2. ajuster la disposition si besoin ;
-3. exporter en PNG (**Fichier → Exporter → Image**) et me l'envoyer ;
-4. j'intègre l'image ici et je retire le XML du dépôt, comme pour l'AS-IS.
+*Diagramme modélisé sous Bizagi Modeler (standard BPMN 2.0) : **1 pool, 5 couloirs**
+(Client, Agence — accueil, Système — portail crédit, Siège — étude crédit,
+Comité de crédit), **11 tâches dont 6 automatisées**, **3 passerelles exclusives**
+(canal de dépôt, complétude, décision) et **18 flux séquentiels**, dont la boucle
+de re-contrôle automatique en cas de pièces manquantes.*
 
 ## 6. Points de contrôle avec les user stories
 
