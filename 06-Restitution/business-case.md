@@ -94,7 +94,7 @@ supprimées** par les mécanismes du TO-BE, avec un taux de récupération prude
 > Sa vraie valeur est **stratégique et défensive** : suppression d'un risque réglementaire
 > (D7), qualité d'évaluation restaurée (D6) et expérience client (12 j → 5 j) difficile à
 > chiffrer mais décisif face à une banque digitale concurrente. C'est le message que porte
-> le [deck de restitution](deck-executive-banque-elyssa.pptx).
+> le deck de restitution (11 pages, support oral — envoyé sur demande).
 
 ## 6. Analyse de sensibilité
 
@@ -131,6 +131,6 @@ client, instruction, pilotage.
 
 ---
 
-*Aller plus loin : [deck executive de restitution](deck-executive-banque-elyssa.pptx) ·
+*Aller plus loin : deck de restitution (11 pages, support oral — envoyé sur demande) ·
 [matrice de traçabilité](matrice-tracabilite.md) ·
 retour au [README](../README.md).*

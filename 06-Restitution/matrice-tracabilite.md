@@ -93,4 +93,4 @@ amont), aucun écran orphelin (sans aval).
 
 *Documents liés : [BRD](../03-Analyse/BRD.md) · [user stories](../04-Exigences/user-stories-backlog.md) ·
 [wireframes](../05-Solution/wireframes/README.md) · [business case](business-case.md) ·
-[deck executive](deck-executive-banque-elyssa.pptx)*
+deck de restitution (11 pages, support oral — envoyé sur demande)*
