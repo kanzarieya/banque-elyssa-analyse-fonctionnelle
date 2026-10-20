@@ -79,6 +79,6 @@ de re-contrôle automatique en cas de pièces manquantes.*
 
 ---
 
-*Voir aussi : les [wireframes low-fi](wireframes/README.md) (12 écrans, version interactive :
+*Voir aussi : les [maquettes desktop couleur](wireframes/README.md) (12 écrans, version interactive :
 [`wireframes.html`](wireframes.html)) et, en semaine 6, le [business case](../06-Restitution/business-case.md)
 et la [matrice de traçabilité complète](../06-Restitution/matrice-tracabilite.md).*

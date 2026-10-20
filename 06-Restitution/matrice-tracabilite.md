@@ -36,7 +36,7 @@ ou sans douleur serait une dérive de périmètre**.
 | **ENF-01** | Sécurité, droits par rôle | (transverse) | 5 profils distincts dans les frames 09/10/11/12 (client, agent, analyste, risques, comité) |
 | **ENF-02** | Protection des données (loi 2004-63) | US-12 | 04 — consentement obligatoire avant soumission (RG-06) |
 | **ENF-03** | Disponibilité 99,5 % / 24-7 | (transverse) | hors maquettes — architecture |
-| **ENF-04** | Performance ≤ 3 s sur 3G/4G | (transverse) | mobile d'abord, écrans épurés low-fi (390 × 844) |
+| **ENF-04** | Performance ≤ 3 s sur 3G/4G | (transverse) | écrans épurés, maquettes desktop 1440 × 900 livrées, déclinaison mobile 390 × 844 prévue |
 | **ENF-05** | Accessibilité + bilingue arabe/français | US-03 | 08 — miroir RTL, cibles tactiles ≥ 44 px |
 | **ENF-06** | Journal conservé 10 ans | US-10 | 09/11/12 — « lecture seule, inviolable » (RG-05) |
 

@@ -23,12 +23,12 @@ Ma mission : produire le dossier d'analyse complet d'un parcours digitalisé.
 | `02-Elicitation/` | Personas, guides d'entretien, synthèse des constats | S1–S2 |
 | `03-Analyse/` | AS-IS BPMN, matrice des douleurs, causes racines, BRD | S2–S3 |
 | `04-Exigences/` | User stories, critères d'acceptation, backlog MoSCoW | S4 |
-| `05-Solution/` | TO-BE BPMN, [wireframes low-fi — 12 écrans](05-Solution/wireframes/README.md) | S5 |
+| `05-Solution/` | TO-BE BPMN, [maquettes desktop couleur — 12 écrans](05-Solution/wireframes/README.md) | S5 |
 | [`06-Restitution/`](06-Restitution/) | [Business case chiffré](06-Restitution/business-case.md), [matrice de traçabilité](06-Restitution/matrice-tracabilite.md), [synthèse executive](06-Restitution/synthese-executive.md), [deck executive (PPTX, 9 pages avec notes de speech)](06-Restitution/deck-executive-banque-elyssa.pptx) | S6 |
 
 ## Outils utilisés
 
-Bizagi Modeler (BPMN) · HTML/CSS (wireframes low-fi, version interactive : [`wireframes.html`](05-Solution/wireframes.html)) · Jira (backlog) · Draw.io · PowerPoint (deck executive de restitution)
+Bizagi Modeler (BPMN) · HTML/CSS (maquettes desktop couleur, version interactive : [`wireframes.html`](05-Solution/wireframes.html)) · Jira (backlog) · Draw.io · PowerPoint (deck executive de restitution)
 
 ## Résultats clés (cibles du processus cible)
 

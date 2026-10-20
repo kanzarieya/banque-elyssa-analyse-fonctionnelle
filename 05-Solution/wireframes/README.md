@@ -1,7 +1,8 @@
 # Wireframes — Module de demande de crédit
 
-**Banque Elyssa (cas fictif)** · maquettes **low-fidelity en niveaux de gris** · mobile d'abord **390 × 844**
-pour le client, desktop **1440 × 900** pour les espaces métier · bilingue **arabe / français** avec mise en
+**Banque Elyssa (cas fictif)** · maquettes **mid-fidelity couleur** · desktop **1440 × 900** pour le portail
+client comme pour les espaces métier (une déclinaison mobile 390 × 844 du portail client est prévue — ENF-04) ·
+bilingue **arabe / français** avec mise en
 miroir RTL (RG-07).
 
 > La version interactive de toutes les frames est dans
@@ -14,62 +15,62 @@ miroir RTL (RG-07).
 
 ---
 
-## 1. Parcours client — mobile 390 × 844
+## 1. Parcours client — portail desktop 1440 × 900
 
 ### Étape 1 · Type de crédit et montant — `US-01 · US-03 · RG-01`
 
 La checklist des pièces se génère depuis le référentiel selon le type choisi ; le brouillon est repris à
 l'identique.
 
-<img src="01-us01-depot-etape1-type-montant.png" width="340">
+<img src="01-us01-depot-etape1-type-montant.png" width="100%">
 
 ### Étape 2 · Pièces justificatives — `US-01 · US-03 · RG-01`
 
 Chaque pièce a un bouton « photographier » ou « téléverser » et un état explicite : reçue, manquante,
 refusée avec la raison (« format illisible »).
 
-<img src="02-us01-depot-pieces.png" width="340">
+<img src="02-us01-depot-pieces.png" width="100%">
 
 ### Étape 3 · Soumission bloquée si dossier incomplet — `US-06 · RG-01`
 
 Le contrôle automatique liste **exactement** les pièces à corriger et affiche la règle appliquée — le client
 n'appelle plus l'agence pour comprendre un refus.
 
-<img src="03-us01-soumission-bloquee.png" width="340">
+<img src="03-us01-soumission-bloquee.png" width="100%">
 
 ### Étape 3 · Récapitulatif et consentement obligatoire — `US-12 · RG-06 · RG-02`
 
 Le bouton « Soumettre » reste désactivé tant que le consentement au traitement des données n'est pas coché.
 
-<img src="04-us12-consentement-recapitulatif.png" width="340">
+<img src="04-us12-consentement-recapitulatif.png" width="100%">
 
 ### Confirmation de dépôt — `US-01 · US-13 · RG-04`
 
 Numéro de dossier unique, récépissé PDF téléchargeable, prochaines étapes expliquées, notification SMS +
 e-mail automatique.
 
-<img src="05-us01-confirmation-recu.png" width="340">
+<img src="05-us01-confirmation-recu.png" width="100%">
 
 ### Suivi de la demande — `US-02 · US-14 · RG-03 · RG-04`
 
 Timeline verticale des états (déposé → en instruction → au comité → décidé) avec date prévue sur l'étape
 courante, alerte « pièce manquante » avec bouton compléter, historique des notifications et rappel J+7.
 
-<img src="06-us02-suivi-timeline.png" width="340">
+<img src="06-us02-suivi-timeline.png" width="100%">
 
 ### Suivi — état vide — `US-02 · RG-01 · RG-02`
 
 « Aucune demande en cours » + reprise du brouillon ; un dossier créé au guichet apparaît ici avec le même
 numéro et la même timeline.
 
-<img src="07-us02-suivi-etat-vide.png" width="340">
+<img src="07-us02-suivi-etat-vide.png" width="100%">
 
 ### Portail en arabe — miroir RTL — `US-03 · RG-07 · RG-04`
 
 Même écran que le suivi, en arabe : navigation, alignements et icônes directionnelles inversés, **parité
 fonctionnelle complète** avec le français.
 
-<img src="08-us03-portail-arabe-rtl.png" width="340">
+<img src="08-us03-portail-arabe-rtl.png" width="100%">
 
 ---
 
