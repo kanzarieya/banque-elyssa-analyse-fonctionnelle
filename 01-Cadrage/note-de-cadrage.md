@@ -63,8 +63,8 @@ réduire les délais, fiabiliser les dossiers et donner une visibilité complèt
 3. Cartographie AS-IS en BPMN + matrice des points de douleur + causes racines
 4. BRD + user stories + critères d'acceptation + backlog priorisé MoSCoW
 5. Processus cible TO-BE en BPMN + matrice de traçabilité
-6. Wireframes Figma des 3 écrans clés
-7. Mini business case + synthèse executive en slides
+6. Maquettes desktop des écrans clés du parcours digitalisé
+7. Mini business case + deck de restitution en slides
 
 ## 6. Planning (6 semaines, 5 à 7 h/semaine)
 

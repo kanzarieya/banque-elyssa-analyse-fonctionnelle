@@ -24,7 +24,7 @@ Ma mission : produire le dossier d'analyse complet d'un parcours digitalisé.
 | `03-Analyse/` | AS-IS BPMN, matrice des douleurs, causes racines, BRD | S2–S3 |
 | `04-Exigences/` | User stories, critères d'acceptation, backlog MoSCoW | S4 |
 | `05-Solution/` | TO-BE BPMN, [maquettes desktop couleur — 12 écrans](05-Solution/wireframes/README.md) | S5 |
-| [`06-Restitution/`](06-Restitution/) | [Business case chiffré](06-Restitution/business-case.md), [matrice de traçabilité](06-Restitution/matrice-tracabilite.md), [synthèse executive](06-Restitution/synthese-executive.md), [deck executive (PPTX, 9 pages avec notes de speech)](06-Restitution/deck-executive-banque-elyssa.pptx) | S6 |
+| [`06-Restitution/`](06-Restitution/) | [Business case chiffré](06-Restitution/business-case.md), [matrice de traçabilité](06-Restitution/matrice-tracabilite.md), [deck de restitution (PPTX, 11 pages, notes de speech incluses)](06-Restitution/deck-executive-banque-elyssa.pptx) | S6 |
 
 ## Outils utilisés
 

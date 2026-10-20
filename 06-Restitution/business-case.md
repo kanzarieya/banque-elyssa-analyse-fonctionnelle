@@ -93,8 +93,8 @@ supprimées** par les mécanismes du TO-BE, avec un taux de récupération prude
 > est **à l'équilibre vers 3 ans** — un business case défendable mais pas spectaculaire.
 > Sa vraie valeur est **stratégique et défensive** : suppression d'un risque réglementaire
 > (D7), qualité d'évaluation restaurée (D6) et expérience client (12 j → 5 j) difficile à
-> chiffrer mais décisif face à une banque digitale concurrente. C'est ce que porte la
-> [synthèse executive](synthese-executive.md).
+> chiffrer mais décisif face à une banque digitale concurrente. C'est le message que porte
+> le [deck de restitution](deck-executive-banque-elyssa.pptx).
 
 ## 6. Analyse de sensibilité
 
@@ -131,5 +131,6 @@ client, instruction, pilotage.
 
 ---
 
-*Aller plus loin : [synthèse executive](synthese-executive.md) · [matrice de traçabilité](matrice-tracabilite.md) ·
+*Aller plus loin : [deck executive de restitution](deck-executive-banque-elyssa.pptx) ·
+[matrice de traçabilité](matrice-tracabilite.md) ·
 retour au [README](../README.md).*
