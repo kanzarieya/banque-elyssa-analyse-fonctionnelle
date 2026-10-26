@@ -41,12 +41,11 @@ en premier. Le fil conducteur va dans un seul sens : constat → douleur → cau
 | [`03-Analyse/`](03-Analyse/README.md) | [AS-IS en BPMN](03-Analyse/as-is-processus.md), [matrice des douleurs](03-Analyse/matrice-douleurs.md), [causes racines](03-Analyse/causes-racines.md), [BRD](03-Analyse/BRD.md) | S3 |
 | [`04-Exigences/`](04-Exigences/README.md) | [User stories, critères Gherkin et backlog MoSCoW](04-Exigences/user-stories-backlog.md) | S4 |
 | [`05-Solution/`](05-Solution/README.md) | [TO-BE en BPMN](05-Solution/to-be-processus.md), [maquettes desktop couleur — 12 écrans](05-Solution/wireframes/README.md) | S5 |
-| [`06-Restitution/`](06-Restitution/README.md) | [Business case chiffré](06-Restitution/business-case.md), [matrice de traçabilité](06-Restitution/matrice-tracabilite.md) · deck de restitution de 11 pages (support oral, envoyé sur demande) | S6 |
+| [`06-Restitution/`](06-Restitution/README.md) | [Business case chiffré](06-Restitution/business-case.md), [matrice de traçabilité](06-Restitution/matrice-tracabilite.md) | S6 |
 
 ## Outils utilisés
 
-Bizagi Modeler (BPMN) · HTML/CSS (maquettes desktop couleur, version interactive : [`wireframes.html`](05-Solution/wireframes.html)) · Jira (backlog) · Draw.io · PowerPoint (deck executive de restitution)
-
+Bizagi Modeler (BPMN) · HTML/CSS (maquettes desktop couleur, version interactive : [`wireframes.html`](05-Solution/wireframes.html)) · Jira (backlog) 
 ## Résultats clés (cibles du processus cible)
 
 - Délai moyen de traitement : **12 jours → 5 jours ouvrés**
@@ -56,5 +55,4 @@ Bizagi Modeler (BPMN) · HTML/CSS (maquettes desktop couleur, version interactiv
 
 ---
 
-*Pour toute question sur la démarche, ou pour recevoir le deck de restitution présenté à l'oral
-(11 pages, notes de speech incluses) : ek.kanzari@gmail.com · [linkedin.com/in/eya-kanzari-43a41822a](https://www.linkedin.com/in/eya-kanzari-43a41822a)*
+*ek.kanzari@gmail.com · [linkedin.com/in/eya-kanzari-43a41822a](https://www.linkedin.com/in/eya-kanzari-43a41822a)*
