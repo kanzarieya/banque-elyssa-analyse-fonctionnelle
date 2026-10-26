@@ -1,6 +1,6 @@
 # User stories + backlog MoSCoW — Module de demande de crédit
 
-**Date :** 9 novembre 2026 · **Auteur :** Eya Kanzari
+**Auteur :** Eya Kanzari
 **Source :** [BRD v0.9](../03-Analyse/BRD.md) — exigences EF-01 à EF-10
 
 > Cas fictif — Banque Elyssa. Critères d'acceptation rédigés en **Gherkin**
@@ -245,4 +245,4 @@ d'acceptation Gherkin passants + journalisation effective + revue métier.
 
 ---
 
-*Semaine suivante : processus cible TO-BE en BPMN et wireframes Figma.*
+*Semaine suivante : processus cible TO-BE en BPMN et maquettes desktop des écrans clés.*

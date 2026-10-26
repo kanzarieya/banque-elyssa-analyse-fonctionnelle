@@ -1,0 +1,11 @@
+# Normaliser les fins de ligne (dépôt public, éditeurs multiples)
+* text=auto eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.bpmn text eol=lf
+*.png binary
+*.jpg binary
+*.pptx binary
+*.pdf binary

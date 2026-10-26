@@ -1,6 +1,6 @@
 # Carte des parties prenantes — Projet Banque Elyssa
 
-**Date :** 19 octobre 2026 · **Auteur :** Eya Kanzari (analyste fonctionnelle)
+**Auteur :** Eya Kanzari (analyste fonctionnelle)
 
 ## 1. Matrice pouvoir / intérêt
 

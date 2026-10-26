@@ -1,6 +1,6 @@
 # Matrice des douleurs — Projet Banque Elyssa
 
-**Date :** 2 novembre 2026 · **Auteur :** Eya Kanzari
+**Auteur :** Eya Kanzari
 **Source :** [synthèse des 17 constats](../02-Elicitation/synthese-constats.md)
 
 > Cas fictif — les impacts chiffrés sont des **hypothèses réalistes** documentées,

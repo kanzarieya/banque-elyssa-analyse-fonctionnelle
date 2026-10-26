@@ -4,7 +4,7 @@
 |---|---|
 | **Entreprise** | Banque Elyssa (entreprise fictive — cas d'école) |
 | **Auteur** | Eya Kanzari — analyste fonctionnelle junior |
-| **Date / version** | 19 octobre 2026 — v1.0 |
+| **Version** | v1.0 |
 | **Statut** | Validée (projet solo) |
 
 ## 1. Contexte
@@ -74,14 +74,14 @@ réduire les délais, fiabiliser les dossiers et donner une visibilité complèt
 | S2 | Élicitation simulée, synthèse des constats, AS-IS BPMN |
 | S3 | Matrice des douleurs, causes racines, BRD |
 | S4 | User stories, critères d'acceptation, backlog MoSCoW |
-| S5 | TO-BE BPMN, wireframes Figma |
-| S6 | Business case, traçabilité, deck executive, publication |
+| S5 | TO-BE BPMN, maquettes desktop des écrans clés |
+| S6 | Business case, traçabilité, deck de restitution, publication |
 
 ## 7. Méthode et outils
 
 - Approche inspirée du **PMI-BA** (traçabilité besoin → exigence → solution)
 - Travail **agile en solo** : backlog hebdomadaire, revue de fin de semaine avec grille de qualité
-- Outils : Bizagi Modeler (BPMN), Figma (wireframes), Jira ou Notion (backlog), PowerPoint/Canva (restitution)
+- Outils : Bizagi Modeler (BPMN), HTML/CSS (maquettes desktop), Jira (backlog), Draw.io, PowerPoint (deck de restitution)
 
 ## 8. Hypothèses et limites
 

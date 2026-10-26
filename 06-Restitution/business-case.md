@@ -1,7 +1,7 @@
 # Business case — Digitalisation du processus de demande de crédit
 
 **Banque Elyssa (cas fictif)** · **Auteur :** Eya Kanzari — analyste fonctionnelle
-**Date / version :** 20 novembre 2026 — v1.0 · **Statut :** prêt pour revue sponsor (N. Jelassi)
+**Version :** v1.0 · **Statut :** prêt pour revue sponsor (N. Jelassi)
 **Sources :** [BRD](../03-Analyse/BRD.md) · [matrice des douleurs](../03-Analyse/matrice-douleurs.md) ·
 [causes racines](../03-Analyse/causes-racines.md) · [processus TO-BE](../05-Solution/to-be-processus.md) ·
 [user stories](../04-Exigences/user-stories-backlog.md)

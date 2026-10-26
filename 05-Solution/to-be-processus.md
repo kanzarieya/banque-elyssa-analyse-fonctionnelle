@@ -1,6 +1,6 @@
 # Processus cible TO-BE — Module de demande de crédit
 
-**Date :** 16 novembre 2026 · **Auteur :** Eya Kanzari
+**Auteur :** Eya Kanzari
 **Source :** [BRD](../03-Analyse/BRD.md) · [AS-IS](../03-Analyse/as-is-processus.md) ·
 [user stories](../04-Exigences/user-stories-backlog.md)
 

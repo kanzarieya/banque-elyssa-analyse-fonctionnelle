@@ -1,6 +1,6 @@
 # Synthèse des entretiens d'élicitation — Projet Banque Elyssa
 
-**Date :** 26 octobre 2026 · **Auteur :** Eya Kanzari
+**Auteur :** Eya Kanzari
 **Sources :** 5 entretiens semi-directifs simulés de 45 minutes (client, agent d'accueil,
 analyste crédit, responsable des risques, directeur d'agence), conduits avec les
 [guides d'entretien](guides-dentretien.md) et les [personas](personas.md).

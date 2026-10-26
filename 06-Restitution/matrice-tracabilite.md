@@ -1,7 +1,7 @@
 # Matrice de traçabilité — Module de demande de crédit
 
 **Banque Elyssa (cas fictif)** · **Auteur :** Eya Kanzari — analyste fonctionnelle
-**Date / version :** 20 novembre 2026 — v1.0
+**Version :** v1.0
 **Objet :** prouver que **chaque exigence remonte à une douleur réelle** et **descente à un écran et
 une étape du processus cible** — et inversement, qu'aucun écran ne sert à rien. C'est le livrable
 annoncé au [BRD §10](../03-Analyse/BRD.md) (« la matrice complète sera livrée en semaine 6 »).

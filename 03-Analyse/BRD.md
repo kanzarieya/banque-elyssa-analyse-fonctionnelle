@@ -6,7 +6,7 @@
 |---|---|
 | **Projet** | Digitalisation du processus de demande de crédit — Banque Elyssa (cas fictif d'école) |
 | **Auteur** | Eya Kanzari — analyste fonctionnelle |
-| **Date / version** | 2 novembre 2026 — v0.9 **en attente de revue sponsor** |
+| **Version** | v0.9 — **en attente de revue sponsor** |
 | **Périmètre** | Du dépôt de la demande à la notification du client (décision du comité hors périmètre) |
 
 ## 1. Contexte et problème métier

@@ -1,6 +1,6 @@
 # Cartographie AS-IS — Processus de demande de crédit
 
-**Date :** 26 octobre 2026 · **Auteur :** Eya Kanzari
+**Auteur :** Eya Kanzari
 **Sources :** [synthèse des entretiens](../02-Elicitation/synthese-constats.md) ·
 [personas](../02-Elicitation/personas.md) · [note de cadrage](../01-Cadrage/note-de-cadrage.md)
 

@@ -1,6 +1,6 @@
 # Analyse des causes racines — Projet Banque Elyssa
 
-**Date :** 2 novembre 2026 · **Auteur :** Eya Kanzari
+**Auteur :** Eya Kanzari
 **Méthode :** 3 analyses « 5 Pourquoi » sur les douleurs P1 les plus coûteuses
 (D1, D2, D4), complétées par une synthèse type Ishikawa sur les 8 douleurs.
 
