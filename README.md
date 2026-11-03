@@ -6,8 +6,14 @@ Cas d'école réalisé en autonomie
 > **Transparence :** la « Banque Elyssa » est une entreprise **fictive**. Tous les chiffres,
 > entretiens et verbatims sont des **hypothèses réalistes documentées**, utilisées pour
 > simuler une mission d'analyse fonctionnelle complète dans un but de démonstration.
-> Ce projet a été mené seule, de bout en bout, avec les méthodes et outils d'un vrai
-> projet d'analyse.
+
+| | |
+|---|---|
+| **Rôle simulé** | Analyste fonctionnelle (business analyst), mission solo |
+| **Période** | 1er juin – 10 juillet 2026 · 6 semaines · 5 à 7 h par semaine · projet finalisé le **10 juillet 2026** |
+| **Nature** | Étude de cas personnelle · banque, personnes et données fictives |
+| **Périmètre** | Du dépôt de la demande à la notification de la décision |
+| **Volume produit** | 2 cartographies BPMN · 14 user stories · 12 maquettes · 1 business case |
 
 ## Contexte en une phrase
 
@@ -41,11 +47,12 @@ en premier. Le fil conducteur va dans un seul sens : constat → douleur → cau
 | [`03-Analyse/`](03-Analyse/README.md) | [AS-IS en BPMN](03-Analyse/as-is-processus.md), [matrice des douleurs](03-Analyse/matrice-douleurs.md), [causes racines](03-Analyse/causes-racines.md), [BRD](03-Analyse/BRD.md) | S3 |
 | [`04-Exigences/`](04-Exigences/README.md) | [User stories, critères Gherkin et backlog MoSCoW](04-Exigences/user-stories-backlog.md) | S4 |
 | [`05-Solution/`](05-Solution/README.md) | [TO-BE en BPMN](05-Solution/to-be-processus.md), [maquettes desktop couleur — 12 écrans](05-Solution/wireframes/README.md) | S5 |
-| [`06-Restitution/`](06-Restitution/README.md) | [Business case chiffré](06-Restitution/business-case.md), [matrice de traçabilité](06-Restitution/matrice-tracabilite.md) | S6 |
+| [`06-Restitution/`](06-Restitution/README.md) | [Business case chiffré](06-Restitution/business-case.md), [matrice de traçabilité](06-Restitution/matrice-tracabilite.md) · deck de restitution de 11 pages | S6 |
 
 ## Outils utilisés
 
-Bizagi Modeler (BPMN) · HTML/CSS (maquettes desktop couleur, version interactive : [`wireframes.html`](05-Solution/wireframes.html)) · Jira (backlog) 
+Bizagi Modeler (BPMN 2.0) · HTML/CSS (maquettes desktop 1440 × 900, version interactive : [`wireframes.html`](05-Solution/wireframes.html)) · Excel (matrice des douleurs, chiffrage) · PowerPoint (deck de restitution) · Git / GitHub (versionnement)
+
 ## Résultats clés (cibles du processus cible)
 
 - Délai moyen de traitement : **12 jours → 5 jours ouvrés**
@@ -55,4 +62,4 @@ Bizagi Modeler (BPMN) · HTML/CSS (maquettes desktop couleur, version interactiv
 
 ---
 
-*ek.kanzari@gmail.com · [linkedin.com/in/eya-kanzari-43a41822a](https://www.linkedin.com/in/eya-kanzari-43a41822a)*
+*Pour toute question sur la démarche : ek.kanzari@gmail.com · [linkedin.com/in/eya-kanzari-43a41822a](https://www.linkedin.com/in/eya-kanzari-43a41822a)*

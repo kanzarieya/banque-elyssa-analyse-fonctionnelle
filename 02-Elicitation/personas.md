@@ -2,7 +2,7 @@
 
 > Personas fictifs, construits comme des représentants réalistes de chaque profil
 > d'acteur du processus de demande de crédit. Ils servent à simuler les entretiens
-> d'élicitation (semaine 2).
+> d'élicitation (S2, du 8 au 12 juin 2026).
 
 ---
 

@@ -72,7 +72,7 @@ Seuil de priorisation : **score ≥ 6**.
 
 ## 4. Douleurs critiques (score 9) — priorités absolues du BRD
 
-| Rang | Constat | Thème | Exigence attendue (à préciser en S3) |
+| Rang | Constat | Thème | Exigence retenue dans le BRD |
 |---|---|---|---|
 | 1 | C01 — Déplacements répétés | Parcours client | Une liste de pièces unique et un dépôt en ligne |
 | 2 | C02 — Aucune visibilité | Parcours client | Suivi d'avancement en temps réel |
@@ -87,10 +87,11 @@ C06, C07, C08, C10, C12, C13, C14, C15, C17.
 Les constats C03, C04 et C16 (score < 6) ne déclenchent pas d'exigence dédiée
 mais sont couverts indirectement par le parcours digitalisé.
 
-## 6. Prochaine étape — BRD (semaine 3)
+## 6. Suite donnée — S3, du 15 au 19 juin 2026
 
-Chaque douleur critique devient un **besoin métier** numéroté (B01 à B05), puis une
-**exigence fonctionnelle** traçable. La matrice de traçabilité finale (S6) reliera :
+Chaque douleur critique devient un **besoin métier** numéroté (B01 à B05) dans le
+[BRD](../03-Analyse/BRD.md), puis une **exigence fonctionnelle** traçable. La
+[matrice de traçabilité](../06-Restitution/matrice-tracabilite.md) relie
 constat → besoin → exigence → user story → écran.
 
 ---

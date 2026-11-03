@@ -4,8 +4,9 @@
 |---|---|
 | **Entreprise** | Banque Elyssa (entreprise fictive — cas d'école) |
 | **Auteur** | Eya Kanzari — analyste fonctionnelle junior |
+| **Période** | 1er juin – 10 juillet 2026 (6 semaines) |
 | **Version** | v1.0 |
-| **Statut** | Validée (projet solo) |
+| **Statut** | Finalisée — revue personnelle (aucune validation externe) |
 
 ## 1. Contexte
 
@@ -68,20 +69,22 @@ réduire les délais, fiabiliser les dossiers et donner une visibilité complèt
 
 ## 6. Planning (6 semaines, 5 à 7 h/semaine)
 
-| Semaine | Contenu |
-|---|---|
-| S1 | Cadrage, parties prenantes, personas, guides d'entretien |
-| S2 | Élicitation simulée, synthèse des constats, AS-IS BPMN |
-| S3 | Matrice des douleurs, causes racines, BRD |
-| S4 | User stories, critères d'acceptation, backlog MoSCoW |
-| S5 | TO-BE BPMN, maquettes desktop des écrans clés |
-| S6 | Business case, traçabilité, deck de restitution, publication |
+| Semaine | Dates 2026 | Contenu |
+|---|---|---|
+| S1 | 1 – 5 juin | Cadrage, parties prenantes, personas, guides d'entretien |
+| S2 | 8 – 12 juin | Élicitation simulée, synthèse des constats, AS-IS BPMN |
+| S3 | 15 – 19 juin | Matrice des douleurs, causes racines, BRD |
+| S4 | 22 – 26 juin | User stories, critères d'acceptation, backlog MoSCoW |
+| S5 | 29 juin – 3 juillet | TO-BE BPMN, maquettes desktop des écrans clés |
+| S6 | 6 – 10 juillet | Business case, traçabilité, deck de restitution, publication |
+
+La date de clôture retenue est le **10 juillet 2026**.
 
 ## 7. Méthode et outils
 
 - Approche inspirée du **PMI-BA** (traçabilité besoin → exigence → solution)
 - Travail **agile en solo** : backlog hebdomadaire, revue de fin de semaine avec grille de qualité
-- Outils : Bizagi Modeler (BPMN), HTML/CSS (maquettes desktop), Jira (backlog), Draw.io, PowerPoint (deck de restitution)
+- Outils : Bizagi Modeler (BPMN 2.0), HTML/CSS (maquettes desktop 1440 × 900), Excel (matrices et chiffrage), PowerPoint (deck de restitution), Git/GitHub (versionnement)
 
 ## 8. Hypothèses et limites
 

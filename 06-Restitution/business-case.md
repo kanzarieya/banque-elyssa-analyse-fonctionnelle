@@ -1,7 +1,7 @@
 # Business case — Digitalisation du processus de demande de crédit
 
 **Banque Elyssa (cas fictif)** · **Auteur :** Eya Kanzari — analyste fonctionnelle
-**Version :** v1.0 · **Statut :** prêt pour revue sponsor (N. Jelassi)
+**Version :** v1.0 · **Statut :** finalisé (revue sponsor simulée, sans validation externe)
 **Sources :** [BRD](../03-Analyse/BRD.md) · [matrice des douleurs](../03-Analyse/matrice-douleurs.md) ·
 [causes racines](../03-Analyse/causes-racines.md) · [processus TO-BE](../05-Solution/to-be-processus.md) ·
 [user stories](../04-Exigences/user-stories-backlog.md)
@@ -18,8 +18,9 @@
 
 Un processus 100 % papier : **12 jours ouvrés** de délai moyen, **35 %** de dossiers
 incomplets arrivant au siège, **3 saisies** du même dossier, **0 visibilité** client,
-et **~960 heures de travail perdues par semaine** (double saisie, recherche d'historique,
-appels de suivi). *(Source : matrice des douleurs, section 4.)*
+et **~960 heures de temps perdu par semaine, tous acteurs confondus** (déplacements,
+appels de suivi, double saisie, recherche d'historique, retouches). *(Source : matrice
+des douleurs, section 4.)*
 
 ## 2. Hypothèses de chiffrage
 
@@ -28,7 +29,7 @@ appels de suivi). *(Source : matrice des douleurs, section 4.)*
 | Volume de demandes | 480 / semaine · **23 040 / an** (48 semaines travaillées) | Cadrage + BRD §8 |
 | Coût horaire interne moyen (agent, analyste) | **25 DT / h** chargé | Hypothèse de marché, masse salariale back-office bancaire |
 | Périmètre d'amortissement | **3 ans** | Horizon standard d'un projet digital |
-| Montée en charge des gains | An 1 : 60 % · An 2 : 90 % · An 3 : 100 % | Adoption du canal en ligne progressive (risque R1 du BRD) |
+| Montée en charge des gains | An 1 : 60 % · An 2 : 90 % · An 3 : 100 % | Adoption du canal en ligne progressive (premier risque du BRD § 9) |
 | Réduction du délai | 12 j → **≤ 5 j** ouvrés | Objectif O1 / décomposition TO-BE §4 |
 | Incomplétude | 35 % → **≤ 10 %** | Objectif O2 |
 
@@ -41,11 +42,16 @@ supprimées** par les mécanismes du TO-BE, avec un taux de récupération prude
 |---|---|---|---|---|
 | D3 — double/triple saisie | 64 h (480 fiches × 8 min) | Dossier unique, une seule saisie (RG-02) | ~90 % | **58 h** |
 | D4 — recherche d'historique | 160 h (20 min × volume) | Historique intégré à l'écran (EF-06) | ~75 % | **120 h** |
-| D1 / D5 — appels de suivi | 2 200 appels × ~3 min ≈ 110 h | Portail + notifications auto (EF-07, RG-04) | ~80 % | **88 h** |
+| D1 / D5 — appels de suivi | 2 200 appels × ~3 min de temps agent (sur 8 min d'appel moyen) ≈ 110 h | Portail + notifications auto (EF-07, RG-04) | ~80 % | **88 h** |
 | D2 — retouche dossiers incomplets | 168 dossiers × ~30 min ≈ 84 h | Contrôle bloquant à la soumission (EF-04) | ~70 % | **59 h** |
 | **Total productivité** | | | | **≈ 325 h / semaine** |
 
 **Gain productivité annuel (à pleine vitesse) :** 325 h × 48 sem × 25 DT ≈ **390 000 DT / an**.
+
+> **Pourquoi 960 h de temps perdu mais 325 h récupérées ?** Les 960 h comptent le temps
+> complet (déplacement client, attente, appel de 8 min en moyenne) ; le chiffrage ne retient
+> que la part directement supprimée par l'outil, avec un taux de récupération prudent par
+> douleur (60 à 90 %). Les deux bases ne s'additionnent pas.
 
 ### Gains non productivité (à surveiller, non monétarisés ici)
 
@@ -85,12 +91,12 @@ supprimées** par les mécanismes du TO-BE, avec un taux de récupération prude
 | Indicateur | Valeur | Lecture |
 |---|---|---|
 | **Gains annuels à pleine vitesse** | **390 000 DT** | productivité récupérée seule |
-| **Retour sur investissement (ROI) à 3 ans** | **≈ −6 % → à l'équilibre** | le projet s'autofinance sur ~3 ans **sans** compter les gains non productivité |
-| **Délai de retour (payback)** | **≈ 3 ans** (cumulé ≈ 0 en année 3) | prudent : basé uniquement sur les heures récupérées |
-| **Payback « élargi »** | **≈ 18–24 mois** | si on valorise ne serait-ce qu'un contentieux D7 évité ou la reprise de capacité commerciale |
+| **Flux net cumulé à 3 ans** | **−40 000 DT** | soit ≈ −4 % du coût total sur 3 ans (1 015 000 DT) ; équilibre atteint en année 4 |
+| **Délai de retour (payback)** | **≈ 3 ans et 2 mois** (cumulé ≈ 0 en année 4) | prudent : basé uniquement sur les heures récupérées |
+| **Payback « élargi »** | **≈ 24 mois** si un gain non productif de ~150 000 DT/an est reconnu ; **≈ 18 mois** à ~270 000 DT/an | contentieux D7 évité, capacité commerciale reprise, conversion améliorée — non monétisés ici |
 
-> **Lecture honnête du sponsor :** sur la seule productivité administrative, le projet
-> est **à l'équilibre vers 3 ans** — un business case défendable mais pas spectaculaire.
+> **Lecture du sponsor :** sur la seule productivité administrative, le projet
+> est **à l'équilibre en année 4** — un business case défendable mais pas spectaculaire.
 > Sa vraie valeur est **stratégique et défensive** : suppression d'un risque réglementaire
 > (D7), qualité d'évaluation restaurée (D6) et expérience client (12 j → 5 j) difficile à
 > chiffrer mais décisif face à une banque digitale concurrente. C'est le message que porte
@@ -103,12 +109,15 @@ Le résultat dépend de trois variables. Scénarios sur les gains annuels à ple
 | Variable | Basse | Retenue | Haute |
 |---|---|---|---|
 | Coût horaire interne | 18 DT/h → 281 000 DT/an | **25 DT/h → 390 000** | 32 DT/h → 499 000 |
-| Taux de récupération moyen | 60 % → 234 000 | **~78 % → 390 000** | 90 % → 450 000 |
+| Taux de récupération moyen | 60 % → 300 000 | **~78 % → 390 000** | 90 % → 450 000 |
 | Adoption du canal en ligne | lente (an 1 à 40 %) | **moyenne (60 %)** | rapide (an 1 à 80 %) |
 
-Même dans le **scénario bas** (18 DT/h, récupération 60 %), le projet reste proche de
-l'équilibre à 3 ans et devient largement positif en scénario haut. Le point de bascule
-n'est pas financier mais **réduction du risque** : plus le coût d'un contentieux de
+Chaque variable est testée seule, les autres restant à leur valeur retenue. Avec
+18 DT/h, les gains tombent à 281 000 DT/an et le retour passe à **~5 ans** ; avec une
+récupération de 60 %, il passe à **~4 ans et 7 mois**. En combinant les deux (18 DT/h et 60 %),
+le projet n'est plus rentable sur la seule productivité : il se justifie alors par le
+risque évité et l'expérience client, pas par le calcul. Le point de bascule n'est donc
+pas financier mais **la réduction du risque** : plus le coût d'un contentieux de
 décision non justifiable est élevé, plus le retour sur investissement s'accélère.
 
 ## 7. Risques qui menacent le business case
@@ -123,7 +132,7 @@ décision non justifiable est élevé, plus le retour sur investissement s'accé
 ## 8. Recommandation
 
 **Lancer le projet.** Le chiffrage prudent sur la seule productivité administrative
-place le retour à ~3 ans ; la valeur réelle vient du trio **conformité (D7) + qualité
+place le retour à ~3 ans et 2 mois ; la valeur réelle vient du trio **conformité (D7) + qualité
 d'analyse (D6) + expérience client (12 j → 5 j)**, non entièrement monétarisable mais
 stratégique. Recommandation de séquence : **MVP canal + complétude (Sprint 1)** — c'est
 là que se concentrent les gains D2/D3 et tout le risque réglementaire — puis suivi

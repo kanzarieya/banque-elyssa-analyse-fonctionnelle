@@ -16,7 +16,7 @@
 | D3 — Saisies multiples | Fiche papier + Excel + compte-rendu (3 saisies) | Une seule saisie, un dossier unique, visible partout | Dossier unique (RG-02) |
 | D4 — Historique inaccessible | 20 min de recherche aux archives | Historique client intégré à l'écran d'instruction | Dossier unique + historique (EF-06) |
 | D7 — Rien n'est traçable | Aucune preuve des contrôles | Journal inviolable : qui, quoi, quand | Journal horodaté (EF-08, RG-05) |
-| D5, D8 — Pilotage | Reporting mensuel manuel | Notifications automatiques + indicateurs continus | Reporting continu (EF-09) |
+| D5, D8 — Suivi client et pilotage | File d'attente saturée par les appels de suivi ; reporting mensuel manuel | Notifications automatiques (le client n'appelle plus) + indicateurs continus | Notifications (EF-07) + reporting continu (EF-09) |
 
 ## 2. Le processus en six temps
 
@@ -52,7 +52,7 @@
 |---|---|---|---|
 | Dépôt → dossier conforme | 3 à 7 jours | J0 à J+1 (contrôle immédiat) | −3 à −6 jours |
 | Étude | 2 à 3 jours | 1 à 2 jours (historique intégré) | −1 jour |
-| Comité | 0 à 7 jours | 0 à 3 jours (transmission immédiate) | −4 jours |
+| Comité | 0 à 7 jours | 0 à 3 jours (transmission immédiate) | 0 à −4 jours |
 | Notification | 1 à 2 jours | Instantanée | −2 jours |
 | **Total moyen** | **≈ 12 jours** | **≤ 5 jours** | **−7 jours** |
 
@@ -80,5 +80,5 @@ de re-contrôle automatique en cas de pièces manquantes.*
 ---
 
 *Voir aussi : les [maquettes desktop couleur](wireframes/README.md) (12 écrans, version interactive :
-[`wireframes.html`](wireframes.html)) et, en semaine 6, le [business case](../06-Restitution/business-case.md)
+[`wireframes.html`](wireframes.html)), le [business case](../06-Restitution/business-case.md)
 et la [matrice de traçabilité complète](../06-Restitution/matrice-tracabilite.md).*

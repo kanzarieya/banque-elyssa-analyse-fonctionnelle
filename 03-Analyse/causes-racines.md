@@ -17,7 +17,8 @@
 
 **Cause racine : absence de gouvernance processus.**
 → *Conséquence pour la solution : l'outil doit mesurer nativement (indicateurs),
-pas seulement informatiser le papier. « On ne peut pas améliorer ce qu'on ne mesure pas. »*
+pas seulement informatiser le papier. Sans indicateur de délai, aucune amélioration
+ne peut être démontrée ni maintenue.*
 
 ## 2. Pourquoi un dossier sur trois arrive-t-il incomplet ? (D2)
 
@@ -71,4 +72,5 @@ fonctionnalités demandées :
 
 ---
 
-*Suite : traduction des besoins en exigences dans le [BRD](BRD.md).*
+*Voir aussi : la traduction des besoins en exigences dans le [BRD](BRD.md) et le
+processus cible dans [`../05-Solution/to-be-processus.md`](../05-Solution/to-be-processus.md).*

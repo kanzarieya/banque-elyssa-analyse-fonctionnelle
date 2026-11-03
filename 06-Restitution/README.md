@@ -1,4 +1,4 @@
-# S6 — Restitution : valeur et preuve
+# S6 — Restitution : valeur et preuve · 6 au 10 juillet 2026
 
 **Question traitée :** est-ce que ça vaut le coût, et peut-on prouver chaque choix ?
 
@@ -9,7 +9,8 @@
 | Deck de restitution | Support oral de 11 pages avec notes de speech — **envoyé sur demande** (support de présentation, pas un livrable à lire) |
 
 **Ce que le lecteur doit en retenir :** ≈ 325 heures récupérables par semaine, soit
-390 000 DT par an, à l'équilibre vers 3 ans sur la seule productivité administrative. La
-vraie valeur est défensive : risque réglementaire supprimé et qualité d'évaluation restaurée.
+390 000 DT par an, pour un retour sur investissement qui n'intervient qu'en année 4
+(≈ 3 ans et 2 mois) sur la seule productivité administrative. La vraie valeur est
+défensive : risque réglementaire supprimé et qualité d'évaluation restaurée.
 
 ← [S5 · Solution](../05-Solution/README.md) · retour : [README du dépôt](../README.md)

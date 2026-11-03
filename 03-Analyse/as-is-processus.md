@@ -48,8 +48,8 @@ dans un outil partagé.
 
 **Boucle 3 — La recherche d'historique** (constats C11, C10)
 L'historique de remboursement d'un client existant se trouve dans les archives
-papier : **20 minutes par dossier en moyenne**. Sur 15 à 20 dossiers par semaine,
-cela représente 5 à 7 heures hebdomadaires d'analyse perdues.
+papier : **20 minutes par dossier en moyenne**. Pour un analyste qui traite 15 à
+20 dossiers par semaine, cela représente 5 à 7 heures hebdomadaires d'analyse perdues.
 
 ## 4. Points de rupture du processus
 
@@ -69,7 +69,7 @@ de fin et 18 flux séquentiels**, dont les trois boucles annotées. La modélisa
 été réalisée en important le processus au format BPMN 2.0 puis en l'ajustant
 visuellement (étiquettes de flux, disposition des couloirs) pour la lisibilité.
 
-## 6. Ce que le TO-BE devra résoudre (aperçu semaine 5)
+## 6. Ce que le TO-BE résout
 
 - **Parcours client** : dépôt en ligne + suivi d'avancement + notifications
 - **Contrôle de complétude** : règles centralisées, vérification dès le dépôt
@@ -79,4 +79,5 @@ visuellement (étiquettes de flux, disposition des couloirs) pour la lisibilité
 
 ---
 
-*Livrables suivants : matrice des douleurs et causes racines, puis BRD (semaine 3).*
+*Voir la [matrice des douleurs](matrice-douleurs.md), les [causes racines](causes-racines.md)
+et le [BRD](BRD.md).*

@@ -4,7 +4,7 @@
 **Version :** v1.0
 **Objet :** prouver que **chaque exigence remonte à une douleur réelle** et **descente à un écran et
 une étape du processus cible** — et inversement, qu'aucun écran ne sert à rien. C'est le livrable
-annoncé au [BRD §10](../03-Analyse/BRD.md) (« la matrice complète sera livrée en semaine 6 »).
+annoncé au [BRD §10](../03-Analyse/BRD.md) et produit en fin de projet.
 
 **Chaîne tracée (approche PMI-BA) :**
 `Constat (C) → Douleur (D) → Besoin (B) → Exigence (EF/ENF) → User story (US) → Règle (RG) → Frame wireframe → Étape TO-BE`
@@ -18,7 +18,7 @@ ou sans douleur serait une dérive de périmètre**.
 
 | Exigence | Description courte | ↑ Douleur / besoin | ↓ User stories | Règles | Frames wireframe | Étape TO-BE | Objectif |
 |---|---|---|---|---|---|---|---|
-| **EF-01** | Formulaire de demande en ligne | D1, D3 / B01 | US-01, US-03 | RG-01, RG-02 | 01, 02, 04, 05, 08 | 1 · Dépôt | O1, O3 |
+| **EF-01** | Formulaire de demande en ligne | D1, D3 / B01 | US-01, US-03, US-13 | RG-01, RG-02 | 01, 02, 04, 05, 08 | 1 · Dépôt | O1, O3 |
 | **EF-02** | Même formulaire en agence (dépôt assisté) | D3 / B01, B04 | US-04 | RG-02, RG-04 | 10 | 1 · Dépôt | O3 |
 | **EF-03** | Référentiel central des pièces | D2 / B02 | US-05 | RG-01 | 11 | 3 · Contrôle | O2 |
 | **EF-04** | Contrôle de complétude bloquant | D2 / B02 | US-06, US-14 | RG-01 | 03, 11 | 3 · Contrôle | O2 |
@@ -36,7 +36,7 @@ ou sans douleur serait une dérive de périmètre**.
 | **ENF-01** | Sécurité, droits par rôle | (transverse) | 5 profils distincts dans les frames 09/10/11/12 (client, agent, analyste, risques, comité) |
 | **ENF-02** | Protection des données (loi 2004-63) | US-12 | 04 — consentement obligatoire avant soumission (RG-06) |
 | **ENF-03** | Disponibilité 99,5 % / 24-7 | (transverse) | hors maquettes — architecture |
-| **ENF-04** | Performance ≤ 3 s sur 3G/4G | (transverse) | écrans épurés, maquettes desktop 1440 × 900 livrées, déclinaison mobile 390 × 844 prévue |
+| **ENF-04** | Performance ≤ 3 s sur 3G/4G | (transverse) | écrans épurés (peu de champs par étape, pas de média lourd) ; **à valider en recette de performance** — non démontrable par une maquette |
 | **ENF-05** | Accessibilité + bilingue arabe/français | US-03 | 08 — miroir RTL, cibles tactiles ≥ 44 px |
 | **ENF-06** | Journal conservé 10 ans | US-10 | 09/11/12 — « lecture seule, inviolable » (RG-05) |
 
@@ -71,13 +71,14 @@ amont), aucun écran orphelin (sans aval).
 
 ## 4. Ce que la matrice a révélé (valeur de la démarche)
 
-- **Aucune fonctionnalité « plaque à collectionner »** : chaque écran du lot wireframes (S5)
+- **Aucune fonctionnalité sans usage démontré** : chaque écran du lot wireframes (S5)
   descend d'une douleur mesurée (S3). Les 3 stories Could/Should (US-11, US-13, US-14) sont les
   seules non bloquantes et restent tracées.
-- **Un point de vigilance identifié** : EF-09 (reporting) et EF-08 (journal) n'ont **pas d'écran
-  dédié** — ils sont portés par le tableau de bord analyste (frame 09) et le référentiel (frame 11).
-  À confirmer avec le sponsor : faut-il un **écran de pilotage direction distinct** (frame 13) ou le
-  KPI intégré suffit-il ? Décision à trancher en revue S6.
+- **Un point de vigilance identifié, tranché en S6** : EF-09 (reporting) et EF-08 (journal)
+  n'ont **pas d'écran dédié** — ils sont portés par le tableau de bord analyste (frame 09) et
+  le référentiel (frame 11). **Décision retenue :** pas d'écran de pilotage direction distinct
+  en version 1 ; les indicateurs du frame 09 suffisent au sponsor. Un écran dédié reste une
+  évolution possible, hors périmètre du MVP.
 - **La règle RG-04 est la plus critique** : elle relie 6 des 12 frames — c'est le fil conducteur
   « le client n'appelle plus » (D1/D5). Sa défaillance réouvrirait ~2 200 appels/semaine.
 

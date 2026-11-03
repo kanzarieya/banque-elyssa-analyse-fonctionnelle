@@ -1,4 +1,4 @@
-# S5 — Processus cible et écrans du parcours digitalisé
+# S5 — Processus cible et écrans du parcours digitalisé · 29 juin au 3 juillet 2026
 
 **Question traitée :** à quoi ressemble le parcours une fois digitalisé, écran par écran.
 
@@ -9,7 +9,8 @@
 | [wireframes/](wireframes/README.md) | Les 12 maquettes en PNG desktop (1440 × 900), avec une note de lecture par écran |
 
 **Ce que le lecteur doit en retenir :** chaque maquette porte ses références US et RG —
-on peut remonter de n'importe quel écran au constat d'origine. Les écrans sont en desktop ;
-la déclinaison mobile du portail client est planifiée au Sprint 1 (ENF-04).
+on peut remonter de n'importe quel écran au constat d'origine. Les écrans sont en desktop
+1440 × 900 ; l'usage sur smartphone bas de gamme exigé par ENF-05 n'est pas maquetté, car une
+maquette valide un parcours et des règles, pas un comportement responsive.
 
 ← [S4 · Exigences](../04-Exigences/README.md) · → suite : [S6 · Restitution](../06-Restitution/README.md)

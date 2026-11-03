@@ -83,11 +83,14 @@
 
 ---
 
-## Grille de synthèse des constats (à remplir en semaine 2)
+## Grille de synthèse des constats (remplie en S2, du 8 au 12 juin 2026)
 
 | ID | Persona | Verbatim simulé | Constat | Impact métier | Fréquence | Gravité | Piste de solution |
 |---|---|---|---|---|---|---|---|
 | C01 | | | | Quotidienne / hebdo / mensuelle | Haute / moyenne / basse | | |
 
-**Règles de priorisation de la matrice des douleurs (semaine 3) :**
+La grille complétée (17 constats C01 à C17) est dans
+[`synthese-constats.md`](synthese-constats.md).
+
+**Règles de priorisation de la matrice des douleurs (S3, du 15 au 19 juin 2026) :**
 score = fréquence × gravité (3/2/1 chacune) → les constats à score ≥ 6 alimentent le BRD en priorité.

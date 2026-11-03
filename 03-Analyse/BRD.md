@@ -6,7 +6,7 @@
 |---|---|
 | **Projet** | Digitalisation du processus de demande de crédit — Banque Elyssa (cas fictif d'école) |
 | **Auteur** | Eya Kanzari — analyste fonctionnelle |
-| **Version** | v0.9 — **en attente de revue sponsor** |
+| **Version** | v1.0 — finalisée (revue sponsor simulée, sans validation externe) |
 | **Périmètre** | Du dépôt de la demande à la notification du client (décision du comité hors périmètre) |
 
 ## 1. Contexte et problème métier
@@ -19,7 +19,7 @@ conséquences mesurées (hypothèses documentées) :
 - **35 %** des dossiers arrivent incomplets au siège (cible : ≤ 10 %)
 - Chaque dossier est saisi **3 fois** (cible : 1)
 - **0 %** de visibilité pour le client entre dépôt et décision (cible : 100 % notifié)
-- ~**960 heures de travail perdues par semaine** (double saisie, recherches d'historique, appels de suivi)
+- ~**960 heures de temps perdu par semaine, tous acteurs confondus** (déplacements clients, appels de suivi, double saisie, recherche d'historique, retouches de dossiers incomplets) — décomposition dans la [matrice des douleurs](matrice-douleurs.md), § 4
 
 ## 2. Objectifs métier
 
@@ -44,7 +44,7 @@ conséquences mesurées (hypothèses documentées) :
 
 | ID | Exigence | Besoin | Priorité MoSCoW indicative |
 |---|---|---|---|
-| EF-01 | Formulaire de demande en ligne (particulier et micro-entreprise), mobile d'abord | B01 | Must |
+| EF-01 | Formulaire de demande en ligne (particulier et micro-entreprise), accessible depuis un ordinateur comme depuis un smartphone | B01 | Must |
 | EF-02 | Formulaire identique utilisable en agence par l'agent (dépôt assisté, pas de double saisie) | B01 | Must |
 | EF-03 | Référentiel central des pièces, par type de crédit, paramétrable par les métiers | B02 | Must |
 | EF-04 | Contrôle de complétude automatique à la soumission, avec liste exacte des pièces manquantes | B02 | Must |
@@ -78,7 +78,7 @@ des impayés, comptabilisation, crédits immobiliers > 200 000 DT.
 
 Le projet sera déclaré réussi si, 6 mois après mise en production : O1 à O4 sont
 atteints **et** aucune régression n'est constatée sur le canal agence (volume de
-dépôits assistés stable) **et** la satisfaction client mesurée par enquête progresse
+dépôts assistés stable) **et** la satisfaction client mesurée par enquête progresse
 d'au moins 20 points.
 
 ## 8. Hypothèses et contraintes
@@ -101,7 +101,8 @@ d'au moins 20 points.
 ## 10. Traçabilité
 
 Constats (C01–C17) → douleurs (D1–D8) → besoins (B01–B05) → exigences (EF/ENF) →
-user stories (semaine 4). La matrice complète sera livrée en semaine 6.
+user stories. La chaîne complète, écran par écran, est dans la
+[matrice de traçabilité](../06-Restitution/matrice-tracabilite.md).
 
 ---
 

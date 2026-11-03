@@ -1,7 +1,7 @@
 # User stories + backlog MoSCoW — Module de demande de crédit
 
 **Auteur :** Eya Kanzari
-**Source :** [BRD v0.9](../03-Analyse/BRD.md) — exigences EF-01 à EF-10
+**Source :** [BRD v1.0](../03-Analyse/BRD.md) — exigences EF-01 à EF-10
 
 > Cas fictif — Banque Elyssa. Critères d'acceptation rédigés en **Gherkin**
 > (Given/When/Then) pour être directement exploitables en recette.
@@ -106,8 +106,8 @@ soumission afin de ne plus envoyer de dossiers incomplets au siège.
 
 ```gherkin
 Scénario: soumission avec pièce manquante
-  Étant donné un type de crédit exigeant fiche de paie et extrait bancaire
-  Quand une demande est soumise sans l'extrait bancaire
+  Étant donné un type de crédit exigeant attestation de revenus et relevé de compte
+  Quand une demande est soumise sans le relevé de compte
   Alors la soumission est bloquée
   Et la liste exacte des pièces manquantes s'affiche avec la règle appliquée
 ```
@@ -227,7 +227,7 @@ demande attend des pièces, afin de ne pas la laisser dormir.
 | Élément | Justification |
 |---|---|
 | Scoring automatique / décision automatisée | Ligne rouge des risques : la décision reste humaine et justifiable (C13) |
-| Application mobile native | Le portail web mobile suffit (ENF-04) ; une app serait du surcoût |
+| Application mobile native | Le portail web responsive suffit (ENF-05) ; une app serait du surcoût |
 | Signature électronique | Nécessite un cadre juridique interne non encore défini dans le cas d'école |
 | Intégration temps réel avec la centrale des risques externe | Hors périmètre du BRD ; traité comme évolution ultérieure |
 
@@ -245,4 +245,6 @@ d'acceptation Gherkin passants + journalisation effective + revue métier.
 
 ---
 
-*Semaine suivante : processus cible TO-BE en BPMN et maquettes desktop des écrans clés.*
+*Suite de la chaîne : [processus cible TO-BE](../05-Solution/to-be-processus.md) et
+[maquettes desktop](../05-Solution/wireframes/README.md) · contrôle de couverture dans la
+[matrice de traçabilité](../06-Restitution/matrice-tracabilite.md).*

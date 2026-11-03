@@ -1,14 +1,21 @@
 # Wireframes — Module de demande de crédit
 
 **Banque Elyssa (cas fictif)** · maquettes **mid-fidelity couleur** · desktop **1440 × 900** pour le portail
-client comme pour les espaces métier (une déclinaison mobile 390 × 844 du portail client est prévue — ENF-04) ·
-bilingue **arabe / français** avec mise en
-miroir RTL (RG-07).
+client comme pour les espaces métier · bilingue **arabe / français** avec mise en miroir RTL (RG-07).
+L'usage sur smartphone bas de gamme exigé par ENF-05 n'est **pas maquetté** ici : ces écrans servent à
+valider le parcours et les règles, pas la déclinaison responsive.
 
 > La version interactive de toutes les frames est dans
 > [`wireframes.html`](../wireframes.html) — chaque écran est traçable vers ses user stories
 > ([`user-stories-backlog.md`](../../04-Exigences/user-stories-backlog.md)) et ses règles de gestion
 > ([`BRD.md`](../../03-Analyse/BRD.md)).
+>
+> **Fil de démonstration :** le dossier **BE-2026-11847** (Sami Ben Ammar, clientèle
+> micro-entreprise, crédit consommation de 15 000 DT sur 36 mois) est déposé en ligne le
+> 12 juin 2026, transmis au siège le jour même, en instruction le 15 juin avec une pièce
+> manquante, puis programmé au comité du 16 juin. Les frames 05, 06 et 09 suivent ce même
+> dossier. La frame 10 (guichet) montre un autre client, Rania Ben Youssef, et la frame 12
+> (comité) un autre dossier de l'ordre du jour.
 
 **Légende des états :** ✔ reçu / conforme · ┄ manquant (bordure pointillée) · ▲ refusé (bordure forte) ·
 ◷ à venir · brouillon = bandeau gris · consentement = case à cocher (RG-06).

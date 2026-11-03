@@ -52,6 +52,10 @@ Légende : **R** = Réalise · **A** = Approuve (responsable final) · **C** = C
 | Business case | R | A | I | I |
 | Recette / validation finale | R | A | C | I |
 
+> **RACI simulé :** les colonnes A, C et I décrivent le circuit de validation prévu dans une
+> mission réelle. Aucune validation externe n'a eu lieu : l'étude de cas a été produite et
+> relue par une seule personne.
+
 ## 4. Gestion des attentes — trois points sensibles identifiés dès le cadrage
 
 1. **Le digital ne doit pas exclure le canal agence** : les clients habitués au papier

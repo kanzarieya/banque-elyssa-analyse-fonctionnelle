@@ -1,4 +1,4 @@
-# S4 — Exigences utilisables et backlog
+# S4 — Exigences utilisables et backlog · 22 au 26 juin 2026
 
 **Question traitée :** que construit-on en premier, et comment on sait que c'est fini ?
 

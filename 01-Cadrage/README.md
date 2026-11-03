@@ -1,4 +1,4 @@
-# S1 — Cadrage
+# S1 — Cadrage · 1er au 5 juin 2026
 
 **Question traitée :** de quoi parle-t-on, avec qui, et jusqu'où ?
 

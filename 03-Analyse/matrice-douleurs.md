@@ -40,15 +40,27 @@ plus cher qu'un mois de retards.
 ## 4. Ce que la matrice change dans l'argumentaire
 
 Avant, la demande était « il faut un outil ». Maintenant, le sponsor peut trancher
-sur des chiffres : « On attaque d'abord D1, D2, D4 et D7, parce qu'ensemble ils
-représentent ~960 heures de travail perdues par semaine et l'intégralité du risque
-client et réglementaire. »
+sur des chiffres : « On attaque d'abord D1, D2, D4 et D7 : les trois premières pèsent
+à elles seules ~900 heures de temps perdu par semaine, et D7 porte le risque
+réglementaire. »
+
+**Composition des ~960 heures perdues par semaine** (temps brut observé, tous acteurs
+confondus — le business case n'en récupère qu'une fraction) :
+
+| Poste | Base de calcul | Temps / semaine |
+|---|---|---|
+| Déplacements clients (D1) | 720 déplacements × 30 min | 360 h |
+| Appels de suivi (D1 / D5) | 2 200 appels × 8 min | 293 h |
+| Recherche d'historique (D4) | 480 dossiers × 20 min | 160 h |
+| Retouches de dossiers incomplets (D2) | 168 dossiers × 30 min | 84 h |
+| Double saisie (D3) | 480 fiches × 8 min | 64 h |
+| **Total** | | **≈ 960 h** |
 
 ## 5. Suite
 
 Chaque douleur P1 devient un **besoin métier** (B01 à B05) dans le
-[BRD](BRD.md). Les douleurs P2 (D3 en partie, D5, D6, D8) alimentent le backlog
-priorisé MoSCoW de la semaine 4.
+[BRD](BRD.md). Les douleurs P2 (D5, D6, D8) alimentent le backlog priorisé MoSCoW
+produit en S4 (22 – 26 juin 2026).
 
 ---
 
