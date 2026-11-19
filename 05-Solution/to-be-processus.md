@@ -36,7 +36,7 @@
 6. **Notification de la décision** — automatique, avec motif en cas de refus et
    prochaines étapes en cas d'accord.
 
-## 3. Choix de modélisation (à savoir défendre en entretien)
+## 3. Choix de modélisation
 
 - **Le couloir « Système — portail crédit »** matérialise l'outil : les tâches
   automatisées y sont en *service tasks*. Ça rend visibles les 6 automatisations
