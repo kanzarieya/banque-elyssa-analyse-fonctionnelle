@@ -120,15 +120,6 @@ risque évité et l'expérience client, pas par le calcul. Le point de bascule n
 pas financier mais **la réduction du risque** : plus le coût d'un contentieux de
 décision non justifiable est élevé, plus le retour sur investissement s'accélère.
 
-## 7. Risques qui menacent le business case
-
-| Risque (origine BRD §9) | Effet sur le chiffrage | Parade |
-|---|---|---|
-| Faible adoption du canal en ligne | Gains D1/D5 amputés | Dépôt assisté identique au web (EF-02) ; on récupère les gains **même si** le client vient à l'agence |
-| Référentiel de complétude mal maintenu | Gains D2 perdus | Paramétrage métiers + revue semestrielle formalisée (US-05) |
-| Résistance des agents | Gains D3/D4 ralentis | Indicateurs de fluidité, pas de notation individuelle |
-| Dérive fonctionnelle | Coût initial gonflé | Tout ajout passe par le backlog MoSCoW et l'arbitrage sponsor |
 
 
 
-retour au [README](../README.md
