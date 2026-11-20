@@ -1,7 +1,7 @@
 # Guides d'entretien d'élicitation — Projet Banque Elyssa
 
 **Auteur :** Eya Kanzari
-**Méthode :** entretiens semi-directifs de 45 minutes, simulés à partir des personas.
+**Méthode :** entretiens de 45 minutes, simulés à partir des personas.
 
 ## Règles de conduite (rappel à moi-même)
 
