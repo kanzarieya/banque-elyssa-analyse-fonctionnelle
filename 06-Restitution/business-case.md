@@ -129,17 +129,6 @@ décision non justifiable est élevé, plus le retour sur investissement s'accé
 | Résistance des agents | Gains D3/D4 ralentis | Indicateurs de fluidité, pas de notation individuelle |
 | Dérive fonctionnelle | Coût initial gonflé | Tout ajout passe par le backlog MoSCoW et l'arbitrage sponsor |
 
-## 8. Recommandation
 
-**Lancer le projet.** Le chiffrage prudent sur la seule productivité administrative
-place le retour à ~3 ans et 2 mois ; la valeur réelle vient du trio **conformité (D7) + qualité
-d'analyse (D6) + expérience client (12 j → 5 j)**, non entièrement monétarisable mais
-stratégique. Recommandation de séquence : **MVP canal + complétude (Sprint 1)** — c'est
-là que se concentrent les gains D2/D3 et tout le risque réglementaire — puis suivi
-client, instruction, pilotage.
 
----
-
-*Aller plus loin : deck de restitution (11 pages, support oral — envoyé sur demande) ·
-[matrice de traçabilité](matrice-tracabilite.md) ·
-retour au [README](../README.md).*
+retour au [README](../README.md
